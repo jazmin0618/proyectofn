@@ -142,6 +142,26 @@
   background: rgba(139, 69, 19, 0.1);
   border-radius: 50%;
 }
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #5c4b37;
+  font-family: 'Georgia', serif;
+}
+
+.loading {
+  background: rgba(245, 231, 214, 0.8);
+  border-radius: 15px;
+  border: 2px solid #d2b48c;
+}
+
+.error {
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 15px;
+  border: 2px solid #8b4513;
+  color: #8b4513;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

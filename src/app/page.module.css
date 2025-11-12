@@ -212,7 +212,7 @@
 }
 
 .dropdownMenu {
-  position: absolute;
+  position:sticky;
   top: 100%;
   left: 0;
   margin-top: 8px;
@@ -225,8 +225,8 @@
   box-shadow: 
     0 12px 40px rgba(139, 69, 19, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
+  z-index: 10;
+  animation: fadeIn 0.1s ease;
 }
 
 @keyframes fadeIn {
