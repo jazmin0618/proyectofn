@@ -2,22 +2,60 @@
 import Link from "next/link";
 import { FaTwitter, FaEnvelope, FaLinkedin, FaWhatsapp, FaChevronDown } from "react-icons/fa";
 import { TranslationProvider, useTranslation } from "./traduccion/usetranslation";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react"; // ✅ Añadido useEffect aquí
 import styles from "./page.module.css";
+import "./globals.css";
+
+// Componente del botón de modo
+function ThemeToggle() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Verificar preferencia guardada al cargar
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark-mode') {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark-mode');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+      localStorage.setItem('theme', '');
+    }
+  };
+
+  return (
+    <div className={styles.themeToggle} onClick={toggleTheme}>
+      <div className={styles.themeToggleTrack}>
+        <div className={styles.themeToggleSun}>☀️</div>
+        <div className={styles.themeToggleMoon}>🌙</div>
+      </div>
+      <div className={`${styles.themeToggleThumb} ${isDarkMode ? styles.themeToggleThumbDark : ''}`}></div>
+    </div>
+  );
+}
 
 function LayoutContent({ children }: { children: ReactNode }) {
   const { language, setLanguage, isTranslating } = useTranslation();
   const [isRecommendationsOpen, setIsRecommendationsOpen] = useState(false);
 
   const recommendationCategories = [
-    { href: "/recomendaciones/imagenes", label: "🎨 IA de Imágenes" },
-    { href: "/recomendaciones/video", label: "🎬 IA de Video" },
-    { href: "/recomendaciones/estudio", label: "📚 IA de Estudio" },
-    { href: "/recomendaciones/escritura", label: "✍️ IA de Escritura" },
-    { href: "/recomendaciones/programacion", label: "💻 IA para Programadores" },
-    { href: "/recomendaciones/audio", label: "🎧 IA de Audio" },
-    { href: "/recomendaciones/productividad", label: "🚀 IA de Productividad" },
-    { href: "/recomendaciones/chatbots", label: "💼 Chatbots Empresariales" }
+    { href: "/recomendaciones#imagenes", label: "🎨 IA de Imágenes" },
+    { href: "/recomendaciones#video", label: "🎬 IA de Video" },
+    { href: "/recomendaciones#estudio", label: "📚 IA de Estudio" },
+    { href: "/recomendaciones#escritura", label: "✍️ IA de Escritura" },
+    { href: "/recomendaciones#programacion", label: "💻 IA para Programadores" },
+    { href: "/recomendaciones#audio", label: "🎧 IA de Audio" },
+    { href: "/recomendaciones#productividad", label: "🚀 IA de Productividad" },
+    { href: "/recomendaciones#chatbots", label: "💼 Chatbots Empresariales" }
   ];
 
   return (
@@ -26,10 +64,15 @@ function LayoutContent({ children }: { children: ReactNode }) {
         {/* Header con imagen de banner */}
         <header>
           <div>
+            <img
+              src="/ia3.jpg"
+              alt="Banner de Inteligencia Artificial"
+              className={styles.bannerImage}
+            />
           </div>
         </header>
 
-        {/* Selector de idioma */}
+        {/* Selector de idioma y modo */}
         <div className={styles.languageSelector}>
           <div className={styles.languageContainer}>
             <span>🌐</span>
@@ -44,6 +87,9 @@ function LayoutContent({ children }: { children: ReactNode }) {
               <option value="fr">Français</option>
             </select>
             {isTranslating && <div className={styles.loadingSpinner} />}
+            
+            {/* Botón de modo nocturno/diurno */}
+            <ThemeToggle />
           </div>
         </div>
 
@@ -79,10 +125,6 @@ function LayoutContent({ children }: { children: ReactNode }) {
                 </div>
               )}
             </div>
-
-            <Link href="/chatbot" className={styles.navLink}>
-              Chatbot
-            </Link>
             
             <Link href="/help" className={styles.navLink}>
               Ayuda

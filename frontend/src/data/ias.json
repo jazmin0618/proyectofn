@@ -1,0 +1,362 @@
+{
+  "imagenes": [
+    {
+      "id": 1,
+      "nombre": "Midjourney",
+      "emoji": "🎨",
+      "paraQueSirve": "Creación de arte digital, ilustraciones y conceptos visuales con estilo estético marcado.",
+      "diferencia": "Calidad artística excepcional, uso mediante Discord, generación de estilos diversos (realista, anime, pintura).",
+      "porQueUsarla": "Para proyectos que necesitan alta calidad artística, consistencia de estilo y resultados profesionales en arte digital."
+    },
+    {
+      "id": 2,
+      "nombre": "DALL-E 3 (OpenAI)",
+      "emoji": "🎨",
+      "paraQueSirve": "Generación de imágenes a partir de descripciones textuales detalladas.",
+      "diferencia": "Integración con ChatGPT para refinar prompts, comprensión contextual avanzada de descripciones complejas.",
+      "porQueUsarla": "Cuando necesitas imágenes precisas basadas en descripciones textuales detalladas y buscas facilidad de uso."
+    },
+    {
+      "id": 3,
+      "nombre": "Stable Diffusion",
+      "emoji": "🎨",
+      "paraQueSirve": "Generación de imágenes de código abierto, altamente personalizable. Ideal para desarrolladores y usuarios avanzados.",
+      "diferencia": "Modelo de código abierto, puede ejecutarse localmente, alto grado de personalización mediante diferentes modelos.",
+      "porQueUsarla": "Para proyectos que requieren control total, personalización avanzada o integración en aplicaciones propias."
+    },
+    {
+      "id": 4,
+      "nombre": "Adobe Firefly",
+      "emoji": "🎨",
+      "paraQueSirve": "Generación de imágenes integrada en el ecosistema Adobe. Enfocada en uso comercial y profesional.",
+      "diferencia": "Enfoque en seguridad comercial (libre de derechos), integración nativa con Creative Cloud (Photoshop, Illustrator).",
+      "porQueUsarla": "Para profesionales del diseño que ya usan Adobe y necesitan integración fluida en su flujo de trabajo actual."
+    },
+    {
+      "id": 19,
+      "nombre": "Bing Image Creator",
+      "emoji": "🎨",
+      "paraQueSirve": "Creación rápida y gratuita de imágenes utilizando tecnología DALL-E.",
+      "diferencia": "Acceso gratuito mediante una cuenta de Microsoft, basado en DALL-E 3, ideal para uso casual.",
+      "porQueUsarla": "Si buscas una herramienta potente y gratuita para la creación casual o de contenido en redes sociales."
+    },
+    {
+      "id": 20,
+      "nombre": "Leonardo AI",
+      "emoji": "🎨",
+      "paraQueSirve": "Plataforma completa para la creación de activos visuales para juegos y arte conceptual.",
+      "diferencia": "Enfoque en la comunidad de desarrolladores de juegos, permite entrenar modelos personalizados (LoRAs).",
+      "porQueUsarla": "Para diseñadores y desarrolladores de videojuegos que necesitan activos visuales específicos y personalizados."
+    }
+  ],
+  "video": [
+    {
+      "id": 5,
+      "nombre": "RunwayML Gen-2",
+      "emoji": "🎬",
+      "paraQueSirve": "Generación de video a partir de texto, imágenes o clips existentes. Edición y manipulación de video.",
+      "diferencia": "Pionero en la generación de video desde texto, suite completa con más de 30 herramientas AI para post-producción.",
+      "porQueUsarla": "Para proyectos de video que requieren múltiples funcionalidades de IA en una sola plataforma unificada."
+    },
+    {
+      "id": 6,
+      "nombre": "Pika Labs",
+      "emoji": "🎬",
+      "paraQueSirve": "Generación de videos cortos y animados a partir de texto o imágenes.",
+      "diferencia": "Interfaz simple mediante Discord, generación rápida de clips creativos con estilo artístico distintivo.",
+      "porQueUsarla": "Para crear videos animados cortos, pruebas de concepto o contenido creativo de manera rápida y accesible."
+    },
+    {
+      "id": 7,
+      "nombre": "Synthesia",
+      "emoji": "🎬",
+      "paraQueSirve": "Creación de videos con avatares humanos IA para contenido corporativo, educativo y de entrenamiento.",
+      "diferencia": "Avatares hiperrealistas, soporte para múltiples idiomas, elimina la necesidad de equipos de grabación o actores.",
+      "porQueUsarla": "Para empresas que necesitan crear videos de training, presentaciones o contenido educativo a escala."
+    },
+    {
+      "id": 21,
+      "nombre": "DeepMotion",
+      "emoji": "🎬",
+      "paraQueSirve": "Creación de animación 3D a partir de videos 2D (captura de movimiento con IA).",
+      "diferencia": "Convierte videos normales en animaciones 3D sin trajes ni equipos especiales (mocapless).",
+      "porQueUsarla": "Para animadores y creadores de contenido 3D que necesitan generar movimientos realistas de personajes rápidamente."
+    },
+    {
+      "id": 29,
+      "nombre": "Descript",
+      "emoji": "🎬",
+      "paraQueSirve": "Edición de video y audio basada en texto (edita la transcripción para editar el clip).",
+      "diferencia": "Edición no lineal revolucionaria, elimina palabras de relleno automáticamente y permite clonar la voz.",
+      "porQueUsarla": "Ideal para podcasters, youtubers y creadores de contenido que priorizan la edición de guiones de manera eficiente."
+    },
+    {
+      "id": 30,
+      "nombre": "Fliki",
+      "emoji": "🎬",
+      "paraQueSirve": "Convierte texto (artículos de blog o guiones) en videos con voces AI, imágenes de archivo y subtítulos.",
+      "diferencia": "Enfoque en la conversión de contenido escrito a video, amplio catálogo de voces e imágenes de stock.",
+      "porQueUsarla": "Para la generación rápida de videos para redes sociales o YouTube a partir de contenido textual existente."
+    }
+  ],
+  "estudio": [
+    {
+      "id": 8,
+      "nombre": "ChatGPT / Gemini",
+      "emoji": "📚",
+      "paraQueSirve": "Asistente general para aprendizaje, explicación de conceptos, resolución de dudas y práctica de habilidades.",
+      "diferencia": "Versatilidad en múltiples materias, capacidad de conversación natural, adaptabilidad a diferentes niveles de comprensión y acceso a información en tiempo real.",
+      "porQueUsarla": "Como tutor personalizado 24/7 para cualquier materia o tema que necesites comprender mejor."
+    },
+    {
+      "id": 9,
+      "nombre": "Wolfram Alpha",
+      "emoji": "📚",
+      "paraQueSirve": "Motor de conocimiento computacional para resolver problemas matemáticos, científicos y técnicos.",
+      "diferencia": "Cálculos precisos, soluciones paso a paso, base de datos curada de conocimiento científico y matemático.",
+      "porQueUsarla": "Para matemáticas, física, química, ingeniería y cualquier materia que requiera cálculos precisos."
+    },
+    {
+      "id": 10,
+      "nombre": "Socratic by Google",
+      "emoji": "📚",
+      "paraQueSirve": "Aplicación móvil para resolver problemas académicos usando la cámara del teléfono.",
+      "diferencia": "Reconocimiento visual de problemas escritos, explicaciones paso a paso, integración con recursos educativos de Google.",
+      "porQueUsarla": "Cuando necesitas ayuda inmediata con ejercicios escritos en papel o libros de texto."
+    },
+    {
+      "id": 22,
+      "nombre": "Perplexity AI",
+      "emoji": "📚",
+      "paraQueSirve": "Motor de respuesta que proporciona respuestas claras citando sus fuentes, ideal para investigación académica.",
+      "diferencia": "Proporciona referencias directas y enlaces a las fuentes utilizadas para generar la respuesta.",
+      "porQueUsarla": "Para obtener respuestas fiables y contrastadas que requieren una validación de las fuentes."
+    },
+    {
+      "id": 23,
+      "nombre": "Elicit",
+      "emoji": "📚",
+      "paraQueSirve": "Asistente de investigación basado en lenguaje que ayuda a resumir artículos científicos y extraer información clave.",
+      "diferencia": "Enfoque específico en literatura científica y papers académicos.",
+      "porQueUsarla": "Para estudiantes e investigadores que necesitan revisar rápidamente grandes cantidades de literatura científica."
+    },
+    {
+      "id": 31,
+      "nombre": "Quizlet",
+      "emoji": "📚",
+      "paraQueSirve": "Creación y estudio con flashcards, tests de práctica y juegos impulsados por IA.",
+      "diferencia": "Algoritmos de aprendizaje espacial que se adaptan a tu conocimiento para optimizar el estudio.",
+      "porQueUsarla": "Para memorizar vocabulario, conceptos clave y prepararse para exámenes de forma interactiva."
+    }
+  ],
+  "escritura": [
+    {
+      "id": 11,
+      "nombre": "Grammarly",
+      "emoji": "✍️",
+      "paraQueSirve": "Corrección avanzada de gramática, ortografía, estilo y tono en textos escritos.",
+      "diferencia": "Análisis contextual profundo, sugerencias de mejora de estilo y claridad, integración con múltiples plataformas.",
+      "porQueUsarla": "Para asegurar la calidad profesional de ensayos, trabajos académicos y documentos importantes."
+    },
+    {
+      "id": 12,
+      "nombre": "QuillBot",
+      "emoji": "✍️",
+      "paraQueSirve": "Parafraseo, resumen y verificación de originalidad en textos.",
+      "diferencia": "Múltiples modos de reescritura, herramienta de resumen automático, verificador de plagio integrado.",
+      "porQueUsarla": "Para mejorar la redacción, evitar repeticiones y asegurar la originalidad en tus escritos."
+    },
+    {
+      "id": 24,
+      "nombre": "Jasper",
+      "emoji": "✍️",
+      "paraQueSirve": "Generación de contenido de marketing (blogs, anuncios, copys) a escala con enfoque en SEO.",
+      "diferencia": "Plantillas especializadas para contenido comercial y de marketing, optimización para motores de búsqueda.",
+      "porQueUsarla": "Para negocios y profesionales del marketing que necesitan generar contenido de alta calidad y optimizado para SEO."
+    },
+    {
+      "id": 32,
+      "nombre": "Surfer SEO",
+      "emoji": "✍️",
+      "paraQueSirve": "Planificación y optimización de contenido escrito para obtener las mejores posiciones en los resultados de búsqueda.",
+      "diferencia": "Analiza las páginas mejor posicionadas para sugerir la estructura, longitud y densidad de palabras clave ideal.",
+      "porQueUsarla": "Para escritores y especialistas en marketing que buscan maximizar el rendimiento SEO de su contenido."
+    },
+    {
+      "id": 33,
+      "nombre": "ShortlyAI",
+      "emoji": "✍️",
+      "paraQueSirve": "Asistente de escritura creativa y novelas, enfocado en el flujo de ideas y la expansión de texto.",
+      "diferencia": "Interfaz limpia y comandos sencillos para generar continuaciones de historia y variar el tono.",
+      "porQueUsarla": "Para escritores de ficción que sufren de bloqueo y necesitan un impulso creativo para sus narrativas."
+    }
+  ],
+  "programacion": [
+    {
+      "id": 13,
+      "nombre": "GitHub Copilot",
+      "emoji": "💻",
+      "paraQueSirve": "Asistente de código que sugiere líneas y funciones completas en tiempo real.",
+      "diferencia": "Integración profunda con IDEs (VS Code, etc.), sugerencias contextuales basadas en el proyecto, soporte para múltiples lenguajes.",
+      "porQueUsarla": "Para aumentar la productividad en desarrollo, aprender mejores prácticas y acelerar la escritura de código."
+    },
+    {
+      "id": 14,
+      "nombre": "Amazon CodeWhisperer",
+      "emoji": "💻",
+      "paraQueSirve": "Asistente de código con foco en seguridad y mejores prácticas para AWS.",
+      "diferencia": "Detección de vulnerabilidades, sugerencias optimizadas para AWS, escaneo de seguridad en tiempo real.",
+      "porQueUsarla": "Para desarrollo en la nube AWS que prioriza la seguridad y las mejores prácticas."
+    },
+    {
+      "id": 25,
+      "nombre": "Tabnine",
+      "emoji": "💻",
+      "paraQueSirve": "Autocompletado de código basado en IA que aprende de tu propio código y de la comunidad.",
+      "diferencia": "Se puede ejecutar en modo privado sin enviar código a la nube (para privacidad), entrenamiento personalizado.",
+      "porQueUsarla": "Para programadores que buscan autocompletado avanzado con un fuerte énfasis en la privacidad y la personalización."
+    },
+    {
+      "id": 34,
+      "nombre": "Blackbox AI",
+      "emoji": "💻",
+      "paraQueSirve": "Herramienta de búsqueda de código y extracción de fragmentos de código de videos y textos.",
+      "diferencia": "Permite copiar código directamente de videos de YouTube o imágenes, además de ser un potente motor de búsqueda de código.",
+      "porQueUsarla": "Cuando necesitas encontrar rápidamente la solución a un problema de codificación a través de la búsqueda o extracción visual."
+    },
+    {
+      "id": 35,
+      "nombre": "Codeium",
+      "emoji": "💻",
+      "paraQueSirve": "Autocompletado de código y chat asistido por IA, con enfoque en la velocidad y el rendimiento.",
+      "diferencia": "Ofrece un plan gratuito generoso, soporte para más de 70 lenguajes y rápida integración con IDEs.",
+      "porQueUsarla": "Para desarrolladores que buscan una alternativa gratuita y rápida a Copilot para la mayoría de sus necesidades de codificación."
+    }
+  ],
+  "audio": [
+    {
+      "id": 15,
+      "nombre": "ElevenLabs",
+      "emoji": "🎧",
+      "paraQueSirve": "Generación y clonación de voces con calidad profesional para diversos usos.",
+      "diferencia": "Voces ultra realistas, control emocional avanzado, clonación de voz precisa y múltiples idiomas.",
+      "porQueUsarla": "Para proyectos de audio profesional, podcasts, audiolibros y contenido que requiere voces naturales."
+    },
+    {
+      "id": 26,
+      "nombre": "AIVA",
+      "emoji": "🎧",
+      "paraQueSirve": "Composición musical asistida por IA para bandas sonoras, videojuegos y publicidad.",
+      "diferencia": "Genera música original en diversos estilos (clásico, electrónico, rock), libre de derechos de autor.",
+      "porQueUsarla": "Para creadores de contenido o desarrolladores que necesitan música de fondo única y legal."
+    },
+    {
+      "id": 36,
+      "nombre": "Soundraw",
+      "emoji": "🎧",
+      "paraQueSirve": "Generación de música a la medida especificando género, estado de ánimo y duración.",
+      "diferencia": "Crea música que se ajusta a las especificaciones exactas del usuario para videos o podcasts.",
+      "porQueUsarla": "Cuando necesitas una pista de audio que coincida perfectamente con el tono y la duración de tu video."
+    },
+    {
+      "id": 37,
+      "nombre": "Otter.ai",
+      "emoji": "🎧",
+      "paraQueSirve": "Transcripción automática de reuniones, entrevistas y clases en tiempo real.",
+      "diferencia": "Reconocimiento de diferentes oradores, generación de resúmenes y palabras clave de la transcripción.",
+      "porQueUsarla": "Para estudiantes o profesionales que necesitan documentar y repasar el contenido de las grabaciones de voz."
+    },
+    {
+      "id": 38,
+      "nombre": "Cleanvoice AI",
+      "emoji": "🎧",
+      "paraQueSirve": "Eliminación de palabras de relleno, clics de boca y ruidos de respiración de grabaciones de podcasts.",
+      "diferencia": "Optimizado para la limpieza de grabaciones de voz y podcasts para un sonido profesional.",
+      "porQueUsarla": "Para podcasters y editores de audio que buscan una herramienta rápida para pulir la calidad de la voz."
+    }
+  ],
+  "productividad": [
+    {
+      "id": 16,
+      "nombre": "Notion AI",
+      "emoji": "🚀",
+      "paraQueSirve": "Asistente integrado en Notion para escritura, resumen, traducción y organización de información.",
+      "diferencia": "Integración nativa con bases de datos de Notion, capacidad de actuar sobre tu información y documentos existentes.",
+      "porQueUsarla": "Si ya usas Notion para organizar tus estudios y proyectos y quieres potenciar tu productividad."
+    },
+    {
+      "id": 27,
+      "nombre": "Fireflies.ai",
+      "emoji": "🚀",
+      "paraQueSirve": "Transcripción y resumen automático de reuniones virtuales, ideal para equipos de trabajo.",
+      "diferencia": "Se une automáticamente a reuniones (Zoom, Meet, Teams) y genera notas accionables, resúmenes y puntos clave.",
+      "porQueUsarla": "Para equipos que quieren automatizar la toma de notas y el seguimiento de reuniones virtuales."
+    },
+    {
+      "id": 39,
+      "nombre": "Coda AI",
+      "emoji": "🚀",
+      "paraQueSirve": "Asistente integrado en la plataforma de documentos todo-en-uno Coda para generar tablas, resúmenes y automatizar flujos de trabajo.",
+      "diferencia": "Ayuda a crear 'apps' a partir de documentos con IA, altamente adaptable para gestión de proyectos y documentos.",
+      "porQueUsarla": "Si utilizas Coda y buscas una IA que no solo escriba, sino que también estructure y automatice tu trabajo."
+    },
+    {
+      "id": 40,
+      "nombre": "Aide-mémoire",
+      "emoji": "🚀",
+      "paraQueSirve": "Automatización de tareas repetitivas mediante la creación de macros con IA.",
+      "diferencia": "Aprende de tus acciones para crear flujos de trabajo personalizados sin necesidad de codificación compleja.",
+      "porQueUsarla": "Para usuarios que necesitan automatizar tareas sencillas pero frecuentes en su escritorio o navegador."
+    },
+    {
+      "id": 41,
+      "nombre": "Taskade",
+      "emoji": "🚀",
+      "paraQueSirve": "Plataforma de gestión de proyectos y tareas con IA para generación de ideas, creación de esquemas y resúmenes.",
+      "diferencia": "Combina la gestión de tareas con herramientas de lluvia de ideas y generación de documentos impulsadas por IA.",
+      "porQueUsarla": "Para equipos o individuos que buscan una herramienta de gestión de proyectos que integre la asistencia creativa de IA."
+    }
+  ],
+  "chatbots": [
+    {
+      "id": 17,
+      "nombre": "Intercom",
+      "emoji": "💼",
+      "paraQueSirve": "Plataforma de mensajería empresarial para atención al cliente y generación de leads.",
+      "diferencia": "Enfoque en conversaciones personalizadas, integración con CRM, chatbots con transición fluida a agentes humanos.",
+      "porQueUsarla": "Para empresas que buscan una solución completa de atención al cliente con escalado humano."
+    },
+    {
+      "id": 18,
+      "nombre": "Drift",
+      "emoji": "💼",
+      "paraQueSirve": "Plataforma de conversación para ventas B2B y marketing conversacional.",
+      "diferencia": "Especialización en lead qualification (calificación de prospectos), integración con herramientas de ventas, enfoque en conversiones.",
+      "porQueUsarla": "Para equipos de ventas B2B que quieren automatizar la calificación y captura de leads de alto valor."
+    },
+    {
+      "id": 28,
+      "nombre": "ManyChat",
+      "emoji": "💼",
+      "paraQueSirve": "Creación de chatbots para marketing y ventas en plataformas como Instagram, Facebook Messenger y WhatsApp.",
+      "diferencia": "Enfoque en automatización de redes sociales y flujos de marketing visuales y sencillos.",
+      "porQueUsarla": "Para negocios que utilizan intensivamente redes sociales para la interacción con clientes y campañas de marketing."
+    },
+    {
+      "id": 42,
+      "nombre": "Tidio",
+      "emoji": "💼",
+      "paraQueSirve": "Herramienta simple para integrar chatbots de atención al cliente en sitios web y tiendas de e-commerce.",
+      "diferencia": "Fácil de implementar, integra chat en vivo, bots de IA y marketing por correo electrónico.",
+      "porQueUsarla": "Para pequeñas y medianas empresas que necesitan una solución de atención al cliente económica y fácil de configurar."
+    },
+    {
+      "id": 43,
+      "nombre": "Zendesk Answer Bot",
+      "emoji": "💼",
+      "paraQueSirve": "Bot de soporte que usa IA para responder preguntas frecuentes y dirigir a los usuarios a artículos de ayuda.",
+      "diferencia": "Integración nativa con la plataforma de soporte Zendesk, especializado en reducir la carga de tickets de soporte.",
+      "porQueUsarla": "Para empresas que ya usan Zendesk para su soporte y quieren automatizar las respuestas iniciales a las consultas."
+    }
+  ]
+}
