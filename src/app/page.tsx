@@ -16,7 +16,7 @@ export default function Home() {
             aprendizaje y toma de decisiones.
             <br/><br/>
             En esencia, la IA busca que las máquinas puedan:
-               <ul>
+                <ul>
                 <li>Aprender: Adquirir información y reglas para usar la información (Aprendizaje Automático o Machine Learning).</li>
                 <li>Razonar: Utilizar reglas para llegar a conclusiones aproximadas o definidas.</li>
                 <li>Resolver problemas: Encontrar soluciones a problemas específicos.</li>

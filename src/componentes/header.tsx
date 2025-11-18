@@ -6,7 +6,7 @@ import { FaGlobe, FaSun, FaMoon, FaBars, FaTimes, FaUser, FaSignOutAlt, FaUserCi
 import { useTranslation } from "@/app/traduccion/useTranslation";
 import styles from "./header.module.css";
 
-export default function Header() {
+export default function Header() { 
   const pathname = usePathname();
   const { language, setLanguage, isTranslating } = useTranslation();
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -54,7 +54,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-          {/* 🔤 NAVEGACIÓN PRINCIPAL (Inicio, Chatbot, Recomendaciones) */}
+        {/* 🔤 NAVEGACIÓN PRINCIPAL (Inicio, Chatbot, Recomendaciones) */}
         <nav className={styles.mainNav}>
           <Link 
             href="/" 
@@ -142,7 +142,7 @@ export default function Header() {
                   </>
                 ) : (
                   /* Si el usuario NO está logueado */
-                  <div className={styles.userDropdown}>
+                  <>
                     <Link 
                       href="/login" 
                       className={styles.dropdownItem}
@@ -160,7 +160,7 @@ export default function Header() {
                       <FaUser className={styles.dropdownIcon} />
                       Crear Cuenta
                     </Link>
-                  </div>
+                  </>
                 )}
               </div>
             )}
