@@ -15,10 +15,10 @@ export class User {
   name: string;
 
   @Column({ nullable: true })
-  occupation: string; 
+  career: string; 
 
   @Column({ nullable: true })
-  purpose: string; 
+  study_level: string; 
   
   @Column({ default: true })
   isActive: boolean;

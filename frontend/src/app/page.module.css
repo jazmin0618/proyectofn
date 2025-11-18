@@ -83,47 +83,6 @@
   100% { transform: rotate(360deg); }
 }
 
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 28px 0;
-  background: linear-gradient(to bottom, #a0522d, #8b4513);
-  box-shadow: 0 4px 25px rgba(139, 69, 19, 0.5);
-  border-bottom: 3px solid #d2b48c;
-}
-
-.navContainer {
-  display: flex;
-  gap: 12px;
-  background: rgba(245, 231, 214, 0.15);
-  backdrop-filter: blur(15px);
-  border-radius: 25px;
-  padding: 12px;
-  border: 2px solid rgba(210, 180, 140, 0.5);
-}
-
-.navLink {
-  padding: 14px 28px;
-  color: #f5e7d6;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 15px;
-  text-decoration: none;
-  border: 2px solid transparent;
-  transition: all 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Georgia', serif;
-  text-shadow: 1px 1px 2px rgba(92, 75, 55, 0.5);
-}
-
-.navLink:hover {
-  background: linear-gradient(135deg, #f5e7d6, #e8d5b7);
-  color: #8b4513;
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 25px rgba(210, 180, 140, 0.6);
-  border: 2px solid #d2b48c;
-  text-shadow: none;
-}
 
 .main {
   flex-grow: 1;
@@ -283,6 +242,62 @@
     width: 90vw;
     max-width: 300px;
   }
+}
+
+.vintageHeader {
+  background: #f5f1e6;
+  border-bottom: 2px solid #d4b896;
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.vintageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo */
+.vintageLogoText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #8b4513;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.vintageLogoText:hover {
+  color: #654321;
+}
+
+/* Navegación */
+.vintageNav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.vintageNavLink {
+  color: #5d4037;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.vintageNavLink:hover {
+  color: #3e2723;
+  background: rgba(212, 184, 150, 0.2);
 }
 
 /* Estilos del botón de modo */
