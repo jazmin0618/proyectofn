@@ -11,10 +11,19 @@ export const authAPI = {
   },
 
   register: async (userData: any) => {
+    // ⬅️ TRANSFORMAR los datos antes de enviarlos
+    const backendData = {
+      email: userData.email,
+      name: userData.name,
+      password: userData.password,
+      occupation: userData.career, // career -> occupation
+      purpose: userData.study_level, // study_level -> purpose
+    };
+    
     const response = await fetch(`${API_URL}/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userData),
+      body: JSON.stringify(backendData),
     });
     return response.json();
   },

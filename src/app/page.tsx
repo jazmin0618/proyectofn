@@ -16,13 +16,13 @@ export default function Home() {
             aprendizaje y toma de decisiones.
             <br/><br/>
             En esencia, la IA busca que las máquinas puedan:
-            <ul>
+               <ul>
                 <li>Aprender: Adquirir información y reglas para usar la información (Aprendizaje Automático o Machine Learning).</li>
                 <li>Razonar: Utilizar reglas para llegar a conclusiones aproximadas o definidas.</li>
                 <li>Resolver problemas: Encontrar soluciones a problemas específicos.</li>
                 <li>Percibir: Entender e interpretar información del entorno (visión, lenguaje).</li>
                 <li>Comprender el lenguaje: Procesar el lenguaje natural (Procesamiento del Lenguaje Natural o PNL).</li>
-            </ul>
+             </ul>
             Un ejemplo clave de su funcionamiento es el Aprendizaje Automático (Machine Learning), donde un
             sistema no se programa explícitamente para una tarea, sino que aprende de grandes cantidades de datos para reconocer patrones y
             hacer predicciones o clasificaciones.
@@ -35,7 +35,7 @@ export default function Home() {
         <h2 className={styles.question}>¿POR QUÉ USAR LA IA?</h2>
         <p className={styles.answer}>
             El uso de la IA está impulsado por varias ventajas fundamentales:
-            <ol>
+              <ol>
                 <li>Automatización y Eficiencia<br/>
                     La IA puede realizar tareas repetitivas, mundanas o de alto volumen mucho más rápido y con mayor precisión que un humano. Esto libera a las personas para que se centren en tareas creativas, estratégicas o que requieran empatía humana.
                     <br/>
