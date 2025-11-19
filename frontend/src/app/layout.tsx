@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Banner */}
           <div className={styles.bannerSection}>
             <img
-              src="/ia3.jpg"
+              src="/ia2.jpg" 
               alt="Banner de Inteligencia Artificial"
               className={styles.bannerImage}
             />
