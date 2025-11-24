@@ -8,8 +8,10 @@ import ListaHerramientas from "@/componentes/desarrollo/recomendacion/listacards
 interface IAsData {
   [key: string]: any[];
 }
-
-export default function Recomendaciones() {
+interface AsistenteProps {
+  datosIAs: IAsData | null; 
+}
+export default function Recomendaciones(){
   const [iasData, setIasData] = useState<IAsData | null>(null);
   const [loading, setLoading] = useState(true);
 

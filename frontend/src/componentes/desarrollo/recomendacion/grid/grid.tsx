@@ -2,6 +2,12 @@
 import Enlace from "next/link";
 import styles from "./grid.module.css";
 
+interface IAsData{
+  [key: string]: any[];
+}
+interface GridCategoriasProps {
+  datosIAs: IAsData | null;
+}
 // Esto viene de tu ias.json
 const categorias = [
   { id: "imagenes", nombre: "Imágenes & Arte", emoji: "🎨", cantidad: 6 },
@@ -12,7 +18,7 @@ const categorias = [
   { id: "audio", nombre: "Audio & Música", emoji: "🎧", cantidad: 5 },
 ];
 
-export default function GridCategorias() {
+export default function GridCategorias({ datosIAs }: GridCategoriasProps) {
   return (
     <section className={styles.categorias}>
       <h2>Explora Herramientas de IA por Categoría</h2>

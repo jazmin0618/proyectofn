@@ -3,6 +3,12 @@ import { useState } from "react";
 import Boton from "@/componentes/ui/button/boton";
 import styles from "./asistente.module.css";
 
+interface IAsData{
+  [key: string]: any[];
+}
+interface AsistenteProps {
+  datosIAs: IAsData | null;
+}
 const preguntas = [
   {
     id: 1,
@@ -16,7 +22,7 @@ const preguntas = [
   }
 ];
 
-export default function AsistenteRecomendacion() {
+export default function AsistenteRecomendacion({ datosIAs }: AsistenteProps) {
   const [pasoActual, setPasoActual] = useState(0);
   const [respuestas, setRespuestas] = useState({});
 
