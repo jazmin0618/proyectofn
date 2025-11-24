@@ -2,14 +2,17 @@
   "imagenes": [
     {
       "id": 1,
+      "imagenes":"https://allia.bluecell.es/wp-content/uploads/2024/04/Midjourney_logo.png",
       "nombre": "Midjourney",
       "emoji": "🎨",
       "paraQueSirve": "Creación de arte digital, ilustraciones y conceptos visuales con estilo estético marcado.",
       "diferencia": "Calidad artística excepcional, uso mediante Discord, generación de estilos diversos (realista, anime, pintura).",
       "porQueUsarla": "Para proyectos que necesitan alta calidad artística, consistencia de estilo y resultados profesionales en arte digital."
     },
+    
     {
       "id": 2,
+      "imagenes": "https://cdn.prod.website-files.com/64f050588895504cb569b1ca/650c050be0a10b45d1a68c6c_Screenshot%202023-09-21%20175336.png",
       "nombre": "DALL-E 3 (OpenAI)",
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes a partir de descripciones textuales detalladas.",
@@ -18,6 +21,7 @@
     },
     {
       "id": 3,
+      "imagenes": "https://assets.topadvisor.com/media/_solution_logo_04032024_26265377.png",
       "nombre": "Stable Diffusion",
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes de código abierto, altamente personalizable. Ideal para desarrolladores y usuarios avanzados.",
@@ -26,6 +30,7 @@
     },
     {
       "id": 4,
+      "imagenes": "https://play-lh.googleusercontent.com/pVDW3ZCnuK9DKm1w6P3ux1b3SiqnLu5xfUabSqKrGFYKBhAU1sE9SvT477rvHegFQZRDYXRS11k3Sz_Hu-mCIrw",
       "nombre": "Adobe Firefly",
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes integrada en el ecosistema Adobe. Enfocada en uso comercial y profesional.",
@@ -34,6 +39,7 @@
     },
     {
       "id": 19,
+      "imagenes": "https://st1.techlusive.in/wp-content/uploads/2023/05/Bing.jpg",
       "nombre": "Bing Image Creator",
       "emoji": "🎨",
       "paraQueSirve": "Creación rápida y gratuita de imágenes utilizando tecnología DALL-E.",
@@ -42,6 +48,7 @@
     },
     {
       "id": 20,
+      "imagenes": "https://app.aicontentlabs.com/v2/providers/square-icons/LeonardoAI.svg",
       "nombre": "Leonardo AI",
       "emoji": "🎨",
       "paraQueSirve": "Plataforma completa para la creación de activos visuales para juegos y arte conceptual.",
@@ -52,6 +59,7 @@
   "video": [
     {
       "id": 5,
+      "imagenes": "https://content.app-sources.com/s/9255624714834551/uploads/Images/download-9299212.png?format=webp",
       "nombre": "RunwayML Gen-2",
       "emoji": "🎬",
       "paraQueSirve": "Generación de video a partir de texto, imágenes o clips existentes. Edición y manipulación de video.",
@@ -60,6 +68,7 @@
     },
     {
       "id": 6,
+      "imagenes": "https://pikalabs.org/wp-content/uploads/2023/09/cropped-PikaLabs-icon.jpg",
       "nombre": "Pika Labs",
       "emoji": "🎬",
       "paraQueSirve": "Generación de videos cortos y animados a partir de texto o imágenes.",
@@ -68,48 +77,27 @@
     },
     {
       "id": 7,
+      "imagenes": "https://cdn.prod.website-files.com/65224274fff7e2e198a708bb/68a048c6ef8a6ebd01687b92_Featured-image-550-X-340-15.jpg",
       "nombre": "Synthesia",
       "emoji": "🎬",
       "paraQueSirve": "Creación de videos con avatares humanos IA para contenido corporativo, educativo y de entrenamiento.",
       "diferencia": "Avatares hiperrealistas, soporte para múltiples idiomas, elimina la necesidad de equipos de grabación o actores.",
       "porQueUsarla": "Para empresas que necesitan crear videos de training, presentaciones o contenido educativo a escala."
-    },
-    {
-      "id": 21,
-      "nombre": "DeepMotion",
-      "emoji": "🎬",
-      "paraQueSirve": "Creación de animación 3D a partir de videos 2D (captura de movimiento con IA).",
-      "diferencia": "Convierte videos normales en animaciones 3D sin trajes ni equipos especiales (mocapless).",
-      "porQueUsarla": "Para animadores y creadores de contenido 3D que necesitan generar movimientos realistas de personajes rápidamente."
-    },
-    {
-      "id": 29,
-      "nombre": "Descript",
-      "emoji": "🎬",
-      "paraQueSirve": "Edición de video y audio basada en texto (edita la transcripción para editar el clip).",
-      "diferencia": "Edición no lineal revolucionaria, elimina palabras de relleno automáticamente y permite clonar la voz.",
-      "porQueUsarla": "Ideal para podcasters, youtubers y creadores de contenido que priorizan la edición de guiones de manera eficiente."
-    },
-    {
-      "id": 30,
-      "nombre": "Fliki",
-      "emoji": "🎬",
-      "paraQueSirve": "Convierte texto (artículos de blog o guiones) en videos con voces AI, imágenes de archivo y subtítulos.",
-      "diferencia": "Enfoque en la conversión de contenido escrito a video, amplio catálogo de voces e imágenes de stock.",
-      "porQueUsarla": "Para la generación rápida de videos para redes sociales o YouTube a partir de contenido textual existente."
     }
   ],
   "estudio": [
     {
       "id": 8,
-      "nombre": "ChatGPT / Gemini",
+      "imagenes": "https://store-images.s-microsoft.com/image/apps.14785.14423064005243201.42399137-369b-40bb-b5be-ac2f079c41bf.b1d6d110-9d93-441f-ac20-2e04fd7dfe3c",
+      "nombre": "ChatGPT",
       "emoji": "📚",
       "paraQueSirve": "Asistente general para aprendizaje, explicación de conceptos, resolución de dudas y práctica de habilidades.",
-      "diferencia": "Versatilidad en múltiples materias, capacidad de conversación natural, adaptabilidad a diferentes niveles de comprensión y acceso a información en tiempo real.",
+      "diferencia": "Versatilidad en múltiples materias, capacidad de conversación natural, adaptabilidad a diferentes niveles de comprensión.",
       "porQueUsarla": "Como tutor personalizado 24/7 para cualquier materia o tema que necesites comprender mejor."
     },
     {
       "id": 9,
+      "imagenes": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFe-a_mOzykgdo3nOEbx19pVKyi8dF9HZOw&s",
       "nombre": "Wolfram Alpha",
       "emoji": "📚",
       "paraQueSirve": "Motor de conocimiento computacional para resolver problemas matemáticos, científicos y técnicos.",

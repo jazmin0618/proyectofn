@@ -3,7 +3,7 @@ import { TranslationProvider } from "./traduccion/useTranslation";
 import { ReactNode } from "react";
 import styles from "./page.module.css";
 import "./globals.css";
-import Header from "@/componentes/header"; 
+import Header from "@/componentes/layout/header/header"; 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
