@@ -1,12 +1,32 @@
 "use client";
 import TarjetaIA from "@/componentes/ui/card/cardia";
 import styles from "./lista.module.css";
+import { useEffect, useState } from "react";
 
 interface ListaHerramientasProps {
   datosIAs: { [key: string]: any[] } | null;
 }
 
 export default function ListaHerramientas({ datosIAs }: ListaHerramientasProps) {
+      const [terminoBusqueda, setTerminoBusqueda] = useState("");
+   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const buscarParam = urlParams.get('buscar');
+    if (buscarParam) {
+      setTerminoBusqueda(buscarParam);
+      
+      // Hacer scroll a la sección si viene de un enlace del footer
+      setTimeout(() => {
+        const hash = window.location.hash;
+        if (hash) {
+          const elemento = document.getElementById(hash.replace('#', ''));
+          if (elemento) {
+            elemento.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, 500);
+    }
+    }, []);
   if (!datosIAs) {
     return <div className={styles.error}>No hay datos disponibles</div>;
   }

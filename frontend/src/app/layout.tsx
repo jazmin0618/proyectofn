@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import styles from "./page.module.css";
 import "./globals.css";
 import Header from "@/componentes/layout/header/header"; 
+import PiePagina from "@/componentes/layout/footer/footer";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -22,12 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
           {/* Contenido principal */}
           <main className={styles.main}>{children}</main>
-          
-
-          {/* Footer (mantén el que tienes) */}
-          <footer className={styles.footer}>
-            {/* ... tu footer actual ... */}
-          </footer>
+          <PiePagina/>
         </body>
       </html>
     </TranslationProvider>

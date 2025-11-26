@@ -1,0 +1,280 @@
+.paginaPerfil {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.cargando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  color: white;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.botonPrimario {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.headerPerfil {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarEmoji {
+  font-size: 36px;
+}
+
+.infoUsuario h1 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.infoUsuario p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumero {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #888;
+}
+
+.botonCerrarSesion {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navPerfil {
+  background: white;
+  border-radius: 12px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.navLink, .navLinkActive {
+  padding: 16px 0;
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+.navLinkActive {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.seccionFavoritos {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.seccionFavoritos h2 {
+  margin: 0 0 24px 0;
+  color: #333;
+}
+
+.sinFavoritos {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.botonDescubrir {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.gridFavoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tarjetaFavorito {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjetaFavorito:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.favoritoHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.favoritoHeader h3 {
+  margin: 0;
+  color: #333;
+}
+
+.descripcion {
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.favoritoCategoria {
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #666;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.favoritoAcciones {
+  display: flex;
+  gap: 12px;
+}
+
+.botonVer {
+  background: #667eea;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+.botonEliminar {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accionesRapidas {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.accionesRapidas h3 {
+  margin: 0 0 24px 0;
+  color: #333;
+}
+
+.gridAcciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.accion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.accion:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.accionEmoji {
+  font-size: 32px;
+  margin-bottom: 12px;
+}

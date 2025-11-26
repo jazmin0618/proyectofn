@@ -13,8 +13,9 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
+  const [favoritosCount, setFavoritosCount] = useState(0);
 
-  // Cargar tema y usuario
+  // Cargar tema y usuario - CORREGIDO
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark-mode') {
@@ -22,9 +23,24 @@ export default function Header() {
       document.documentElement.classList.add('dark-mode');
     }
 
+    // CARGAR USUARIO CON MANEJO DE ERRORES
     const userData = localStorage.getItem('user');
-    if (userData) {
-      setUser(JSON.parse(userData));
+    console.log('Header - userData:', userData); // Para debug
+    
+    if (userData && userData !== 'undefined' && userData !== 'null') {
+      try {
+        const userObj = JSON.parse(userData);
+        console.log('Header - usuario parseado:', userObj); // Para debug
+        setUser(userObj);
+      } catch (error) {
+        console.error('Header - Error parsing user data:', error);
+        // Limpiar datos corruptos
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
+        setUser(null);
+      }
+    } else {
+      setUser(null);
     }
   }, []);
 

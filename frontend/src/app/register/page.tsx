@@ -32,7 +32,7 @@ export default function Register() {
         localStorage.setItem('token', result.access_token);
         localStorage.setItem('user', JSON.stringify(result.user));
         setMessage('¡Registro exitoso! Redirigiendo...');
-        router.push('/dashboard');
+        router.push('/perfil');
       } else {
         setMessage(result.message || 'Error en el registro');
       }

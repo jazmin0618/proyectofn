@@ -1,16 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import GridCategorias from "@/componentes/desarrollo/recomendacion/grid/grid";
-import AsistenteRecomendacion from "@/componentes/desarrollo/recomendacion/asistente/asistente";
 import ListaHerramientas from "@/componentes/desarrollo/recomendacion/listacards/lista";
 
 interface IAsData {
   [key: string]: any[];
 }
-interface AsistenteProps {
-  datosIAs: IAsData | null; 
-}
+
 export default function Recomendaciones(){
   const [iasData, setIasData] = useState<IAsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,17 +41,6 @@ export default function Recomendaciones(){
           Encuentra las mejores herramientas de inteligencia artificial para tus necesidades específicas
         </p>
       </header>
-
-      {/* ASISTENTE DE RECOMENDACIÓN (NUEVO) */}
-      <section className={styles.seccionAsistente}>
-        <AsistenteRecomendacion datosIAs={iasData} />
-      </section>
-
-      {/* GRID DE CATEGORÍAS (NUEVO) */}
-      <section className={styles.seccionCategorias}>
-        <h2 className={styles.tituloSeccion}>Explora por Categoría</h2>
-        <GridCategorias datosIAs={iasData} />
-      </section>
 
       {/* LISTA COMPLETA DE HERRAMIENTAS CON CARDS (✅ REEMPLAZA TU CÓDIGO VIEJO) */}
       <section className={styles.seccionHerramientas}>

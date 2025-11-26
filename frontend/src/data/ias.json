@@ -106,6 +106,7 @@
     },
     {
       "id": 10,
+      "imagenes":"https://www.genengnews.com/wp-content/uploads/2022/02/BestApps_SocraticByGoogle.jpg",
       "nombre": "Socratic by Google",
       "emoji": "📚",
       "paraQueSirve": "Aplicación móvil para resolver problemas académicos usando la cámara del teléfono.",
@@ -114,6 +115,7 @@
     },
     {
       "id": 22,
+      "imagenes":"https://framerusercontent.com/images/gcMkPKyj2RX8EOEja8A1GWvCb7E.jpg?width=2000&height=2000",
       "nombre": "Perplexity AI",
       "emoji": "📚",
       "paraQueSirve": "Motor de respuesta que proporciona respuestas claras citando sus fuentes, ideal para investigación académica.",
@@ -122,6 +124,7 @@
     },
     {
       "id": 23,
+      "imagenes":"https://cdn-icons-png.flaticon.com/512/653/653780.png",
       "nombre": "Elicit",
       "emoji": "📚",
       "paraQueSirve": "Asistente de investigación basado en lenguaje que ayuda a resumir artículos científicos y extraer información clave.",
@@ -130,6 +133,7 @@
     },
     {
       "id": 31,
+      "imagenes":"https://play-lh.googleusercontent.com/hiQHKRhpuGu4pWAFhpto9H7qWKSdX-BjKbDAtZYgm_jfoD0cN7MCllGOn6L3XWo-6Q",
       "nombre": "Quizlet",
       "emoji": "📚",
       "paraQueSirve": "Creación y estudio con flashcards, tests de práctica y juegos impulsados por IA.",
@@ -140,6 +144,7 @@
   "escritura": [
     {
       "id": 11,
+      "imagenes":"https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxiq8rwXckZAP_inAe6ki68mFKhxAIYYzc96KJMP0JY4KC899jXBwKagCNpSWPkAxVBj5ADudR0.gDOfn5L.Bpkg-&format=source",
       "nombre": "Grammarly",
       "emoji": "✍️",
       "paraQueSirve": "Corrección avanzada de gramática, ortografía, estilo y tono en textos escritos.",
@@ -148,6 +153,7 @@
     },
     {
       "id": 12,
+      "imagenes":"https://store-images.s-microsoft.com/image/apps.58642.14365213924949883.5b96dfef-d30b-47eb-9d10-e400141442da.9f48e77b-a38f-42c3-b5ca-f9c583d1dacf",
       "nombre": "QuillBot",
       "emoji": "✍️",
       "paraQueSirve": "Parafraseo, resumen y verificación de originalidad en textos.",
@@ -156,6 +162,7 @@
     },
     {
       "id": 24,
+      "imagenes":"https://1009ce1c.delivery.rocketcdn.me/wp-content/uploads/2024/07/Design-sans-titre-9.png",
       "nombre": "Jasper",
       "emoji": "✍️",
       "paraQueSirve": "Generación de contenido de marketing (blogs, anuncios, copys) a escala con enfoque en SEO.",
@@ -164,6 +171,7 @@
     },
     {
       "id": 32,
+      "imagenes":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQimJkTwC_F7lxXvaE1kS0lPNDxQ1whTuLlfw&s",
       "nombre": "Surfer SEO",
       "emoji": "✍️",
       "paraQueSirve": "Planificación y optimización de contenido escrito para obtener las mejores posiciones en los resultados de búsqueda.",
@@ -172,6 +180,7 @@
     },
     {
       "id": 33,
+      "imagenes":"https://pbs.twimg.com/profile_images/1365347975023763461/TtNe6aIn_400x400.jpg",
       "nombre": "ShortlyAI",
       "emoji": "✍️",
       "paraQueSirve": "Asistente de escritura creativa y novelas, enfocado en el flujo de ideas y la expansión de texto.",
@@ -182,6 +191,7 @@
   "programacion": [
     {
       "id": 13,
+      "imagenes":"https://www.podfeet.com/blog/wp-content/uploads/2021/09/GitHub-Copilot-logo-1040x650.png",
       "nombre": "GitHub Copilot",
       "emoji": "💻",
       "paraQueSirve": "Asistente de código que sugiere líneas y funciones completas en tiempo real.",
@@ -190,6 +200,7 @@
     },
     {
       "id": 14,
+      "imagenes":"https://warioduckerman.com/wp-content/uploads/2024/08/cover-codewhisperer.png",
       "nombre": "Amazon CodeWhisperer",
       "emoji": "💻",
       "paraQueSirve": "Asistente de código con foco en seguridad y mejores prácticas para AWS.",
@@ -198,6 +209,7 @@
     },
     {
       "id": 25,
+      "imagenes":"https://avatars.githubusercontent.com/u/6810259?s=200&v=4",
       "nombre": "Tabnine",
       "emoji": "💻",
       "paraQueSirve": "Autocompletado de código basado en IA que aprende de tu propio código y de la comunidad.",
@@ -206,6 +218,7 @@
     },
     {
       "id": 34,
+      "imagenes":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0JYatcWOVQTjMrMQaaIIyyw_Ae6xV3z4wjw&s",
       "nombre": "Blackbox AI",
       "emoji": "💻",
       "paraQueSirve": "Herramienta de búsqueda de código y extracción de fragmentos de código de videos y textos.",
@@ -214,6 +227,7 @@
     },
     {
       "id": 35,
+      "imagenes":"https://avatars.githubusercontent.com/u/108689340?s=200&v=4",
       "nombre": "Codeium",
       "emoji": "💻",
       "paraQueSirve": "Autocompletado de código y chat asistido por IA, con enfoque en la velocidad y el rendimiento.",
@@ -224,6 +238,7 @@
   "audio": [
     {
       "id": 15,
+      "imagenes":"https://cdn.prod.website-files.com/657639ebfb91510f45654149/67cef0f6ac4fe688755e2fb7_667f481c82c31cfc88730e6b_AD_4nXeob58qSPf74x7zBtlB8jEWba-C_uLyJkLBl2CUtEA5tkfDXzrqzQNZekKVu9YzLwLJu0C8iBN_SHP6ukecJXe9CpCSKuOLOt53Ah6kqZLLnCK3q3LKHHz3FS6xMUj9rZS2su4NsgZ6JehpCdvQvVh1ssbt.webp",
       "nombre": "ElevenLabs",
       "emoji": "🎧",
       "paraQueSirve": "Generación y clonación de voces con calidad profesional para diversos usos.",
@@ -232,7 +247,7 @@
     },
     {
       "id": 26,
-      "nombre": "AIVA",
+      "imagenes":"https://www.aiva.ai/assets/img/aiva_logo_2.png",      "nombre": "AIVA",
       "emoji": "🎧",
       "paraQueSirve": "Composición musical asistida por IA para bandas sonoras, videojuegos y publicidad.",
       "diferencia": "Genera música original en diversos estilos (clásico, electrónico, rock), libre de derechos de autor.",
@@ -240,6 +255,7 @@
     },
     {
       "id": 36,
+      "imagenes":"https://cdn-1.webcatalog.io/catalog/soundraw/soundraw-icon-filled-256.png?v=1714778176346",
       "nombre": "Soundraw",
       "emoji": "🎧",
       "paraQueSirve": "Generación de música a la medida especificando género, estado de ánimo y duración.",
@@ -248,6 +264,7 @@
     },
     {
       "id": 37,
+      "imagenes":"https://cdn.prod.website-files.com/61a05ff14c09ecacc06eec05/620ce4bf4c6742e9943e1ed1_otter-avatar.svg",
       "nombre": "Otter.ai",
       "emoji": "🎧",
       "paraQueSirve": "Transcripción automática de reuniones, entrevistas y clases en tiempo real.",
@@ -256,6 +273,7 @@
     },
     {
       "id": 38,
+      "imagenes":"https://cdn.prod.website-files.com/63b9c43cf803b0331540fa68/6749e1aae2a8d680d69fd468_cleanvoice-ai.webp",
       "nombre": "Cleanvoice AI",
       "emoji": "🎧",
       "paraQueSirve": "Eliminación de palabras de relleno, clics de boca y ruidos de respiración de grabaciones de podcasts.",
@@ -266,6 +284,7 @@
   "productividad": [
     {
       "id": 16,
+      "imagenes":"https://thetechblink.com/wp-content/uploads/2025/06/notion_logo.jpg",
       "nombre": "Notion AI",
       "emoji": "🚀",
       "paraQueSirve": "Asistente integrado en Notion para escritura, resumen, traducción y organización de información.",
@@ -274,6 +293,7 @@
     },
     {
       "id": 27,
+      "imagenes":"https://allia.bluecell.es/wp-content/uploads/2024/04/1505591983777_b8992be5e030e2680dd2_512.png",
       "nombre": "Fireflies.ai",
       "emoji": "🚀",
       "paraQueSirve": "Transcripción y resumen automático de reuniones virtuales, ideal para equipos de trabajo.",
@@ -282,6 +302,7 @@
     },
     {
       "id": 39,
+      "imagenes":"https://fahimai.com/wp-content/uploads/2025/03/Coda-CTA.png",
       "nombre": "Coda AI",
       "emoji": "🚀",
       "paraQueSirve": "Asistente integrado en la plataforma de documentos todo-en-uno Coda para generar tablas, resúmenes y automatizar flujos de trabajo.",
@@ -298,6 +319,7 @@
     },
     {
       "id": 41,
+      "imagenes":"https://play-lh.googleusercontent.com/EtdIeKn8qyg91p3E4g_-WP_fiT2ZhiLWbjOECHBZAvd1G4Q8foq-JUpLRl0uoXD42eBVzQdpZdCMR6LkrbqTAg",
       "nombre": "Taskade",
       "emoji": "🚀",
       "paraQueSirve": "Plataforma de gestión de proyectos y tareas con IA para generación de ideas, creación de esquemas y resúmenes.",
@@ -308,6 +330,7 @@
   "chatbots": [
     {
       "id": 17,
+      "imagenes":"https://cdn.shopify.com/app-store/listing_images/f35a727bbf8a7939bce649bc2bd15457/icon/CNy2svmnuPoCEAE=.png",
       "nombre": "Intercom",
       "emoji": "💼",
       "paraQueSirve": "Plataforma de mensajería empresarial para atención al cliente y generación de leads.",
@@ -316,6 +339,7 @@
     },
     {
       "id": 18,
+      "imagenes":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHXcBefSt4yYu3q0KMpfNO68t9htTu3d6VQ&s",
       "nombre": "Drift",
       "emoji": "💼",
       "paraQueSirve": "Plataforma de conversación para ventas B2B y marketing conversacional.",
@@ -324,6 +348,7 @@
     },
     {
       "id": 28,
+      "imagenes":"https://play-lh.googleusercontent.com/N8fTqz3dXVu0z8oWtRoCYJ1F2ewjr3mr5KjNB-kN9sMJgWcJYVoftrwPxcBtkGSy2sNZ",
       "nombre": "ManyChat",
       "emoji": "💼",
       "paraQueSirve": "Creación de chatbots para marketing y ventas en plataformas como Instagram, Facebook Messenger y WhatsApp.",
@@ -332,6 +357,7 @@
     },
     {
       "id": 42,
+      "imagenes":"https://play-lh.googleusercontent.com/5-eR3PalWOR2dp-Kr--rNi_uqeE7OUfmxPugO6QNxGpq-MMqkMNHe2f0Osair0nxHyg",
       "nombre": "Tidio",
       "emoji": "💼",
       "paraQueSirve": "Herramienta simple para integrar chatbots de atención al cliente en sitios web y tiendas de e-commerce.",
@@ -340,6 +366,7 @@
     },
     {
       "id": 43,
+      "imagenes":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3O1MC9hDXERSFFzzRUysSsDK8-d-OUvaxa62wFJm5FSGI7uE84VuzO-g7sl2j-J5cWoQ&usqp=CAU",
       "nombre": "Zendesk Answer Bot",
       "emoji": "💼",
       "paraQueSirve": "Bot de soporte que usa IA para responder preguntas frecuentes y dirigir a los usuarios a artículos de ayuda.",
