@@ -1,27 +1,36 @@
-# 1. IMAGEN BASE: Usamos una imagen oficial de Node.js (versión LTS).
+# 1. IMAGEN BASE
 FROM node:lts-slim
 
-# 2. DIRECTORIO DE TRABAJO: Todos los comandos se ejecutan desde /app
+# 2. DIRECTORIO DE TRABAJO BASE
 WORKDIR /app
 
-# 3. COPIA DE ARCHIVOS: Copia todo el contenido del repositorio al contenedor
+# 3. COPIA DE ARCHIVOS
 COPY . .
 
+# ---------------------------------------------
 # 4. PASO DE BUILD DEL BACKEND (NestJS)
-# Instalamos y construimos el Backend, que será el servidor principal.
+# ---------------------------------------------
 RUN echo "⚙️ Instalando y construyendo el Backend..."
-RUN cd backend && npm install && npm run build
+# Cambiamos temporalmente el WORKDIR al subproyecto
+WORKDIR /app/backend 
+RUN npm install 
+RUN npm run build
 
+# ---------------------------------------------
 # 5. PASO DE BUILD DEL FRONTEND (Next.js)
-# Next.js debe ser construido para generar los archivos estáticos.
-# ¡Asegúrate de que tus variables de entorno estén disponibles durante el build de Next!
+# ---------------------------------------------
 RUN echo "⚛️ Instalando y construyendo el Frontend..."
-RUN cd frontend && npm install && npm run build
+# Cambiamos el WORKDIR al subproyecto del frontend
+WORKDIR /app/frontend
+RUN npm install 
+RUN npm run build
 
-# 6. EXPOSICIÓN DE PUERTO: El puerto que usa NestJS por defecto es 3000
+# ---------------------------------------------
+# 6. CONFIGURACIÓN FINAL Y ARRANQUE
+# ---------------------------------------------
+# Volvemos al directorio raíz (/app) para el comando de inicio (CMD)
+WORKDIR /app 
 EXPOSE 3000
 
-# 7. COMANDO DE INICIO: Ejecuta el servidor de producción del Backend (NestJS).
-# Este backend debe estar configurado para servir los archivos estáticos
-# generados por Next.js en el paso 5.
+# El comando de inicio debe ejecutarse desde /app, pero apuntando a la carpeta backend.
 CMD ["npm", "start:prod", "--prefix", "./backend"]
