@@ -11,10 +11,11 @@ COPY . .
 # 4. PASO DE BUILD DEL BACKEND (NestJS)
 # ---------------------------------------------
 RUN echo "⚙️ Instalando y construyendo el Backend..."
-# Cambiamos temporalmente el WORKDIR al subproyecto
+# Cambiamos el WORKDIR al subproyecto del backend
 WORKDIR /app/backend 
 RUN npm install 
-RUN npm run build
+# Usamos TSC/npx directamente para evitar el error de tsconfig.json
+RUN npx tsc -p tsconfig.build.json
 
 # ---------------------------------------------
 # 5. PASO DE BUILD DEL FRONTEND (Next.js)
@@ -32,5 +33,5 @@ RUN npm run build
 WORKDIR /app 
 EXPOSE 3000
 
-# El comando de inicio debe ejecutarse desde /app, pero apuntando a la carpeta backend.
+# Comando para iniciar la aplicación de NestJS, que debe servir el frontend
 CMD ["npm", "start:prod", "--prefix", "./backend"]
