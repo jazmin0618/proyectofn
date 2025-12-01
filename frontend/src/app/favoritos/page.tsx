@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import styles from "./favoritos.module.css";
-
 interface IA {
   id: number;
   nombre: string;

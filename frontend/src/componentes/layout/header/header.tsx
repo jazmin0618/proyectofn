@@ -136,18 +136,47 @@ export default function Header() {
                       <div>
                         <strong>{user.name}</strong>
                         <span>{user.email}</span>
+                        <small>Ver perfil completo</small>
                       </div>
                     </div>
                     
-                    <Link 
-                      href="/perfil" 
-                      className={styles.dropdownItem}
-                      onClick={() => setIsUserMenuOpen(false)}
-                    >
-                      <FaUser className={styles.dropdownIcon} />
-                      Visitar tu Perfil
-                    </Link>
+                    {/* OPCIONES PRINCIPALES */}
+        <div className={styles.dropdownSection}>
+          <h4>Mi Cuenta</h4>
+          <Link 
+            href="/perfil" 
+            className={styles.dropdownItem}
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            <FaUser className={styles.dropdownIcon} />
+            Mi Perfil
+          </Link>
+          <Link 
+            href="/favoritos" 
+            className={styles.dropdownItem}
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            ❤️ Mis Favoritos
+          </Link>
+          <Link 
+            href="/historial" 
+            className={styles.dropdownItem}
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            📚 Historial
+          </Link>
+          <Link 
+            href="/configuracion" 
+            className={styles.dropdownItem}
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            ⚙️ Configuración
+          </Link>
+        </div>
+        
                     
+                    <div className={styles.dropdownDivider} />
+
                     <button 
                       onClick={handleLogout}
                       className={styles.dropdownItem}

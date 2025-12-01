@@ -1,44 +1,39 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, HttpException, HttpStatus } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
-@Controller('auth') //  ruta base /auth
+@Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @Post('register') //  Ruta completa: /auth/register
+  @Post('register')
   async register(@Body() data: any) {
     try {
-      const user = await this.authService.register(data);
-      return {
-        success: true,
-        message: 'Usuario creado exitosamente',
-        user: {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-        },
-      };
+      const result = await this.authService.register(data);
+      return result; // Ya incluye success, access_token y user
     } catch (error) {
-      return {
-        success: false,
-        message: error.message || 'Error al crear usuario',
-      };
+      throw new HttpException(
+        {
+          success: false,
+          message: error.message || 'Error al crear usuario',
+        },
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
 
-  @Post('login') //  Ruta completa: /auth/login
+  @Post('login')
   async login(@Body() data: { email: string; password: string }) {
     try {
       const result = await this.authService.login(data.email, data.password);
-      return {
-        success: true,
-        ...result,
-      };
+      return result; // Ya incluye success, access_token y user
     } catch (error) {
-      return {
-        success: false,
-        message: error.message || 'Error al iniciar sesión',
-      };
+      throw new HttpException(
+        {
+          success: false,
+          message: error.message || 'Error al iniciar sesión',
+        },
+        HttpStatus.UNAUTHORIZED,
+      );
     }
   }
 }

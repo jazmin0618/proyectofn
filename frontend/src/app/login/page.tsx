@@ -17,6 +17,8 @@ export default function Login() {
     setError("");
 
     try {
+      console.log("🔄 Enviando login...");
+      
       const response = await fetch("http://localhost:3001/auth/login", {
         method: "POST",
         headers: {
@@ -25,23 +27,44 @@ export default function Login() {
         body: JSON.stringify({ email, password }),
       });
 
+      console.log("📡 Status de respuesta:", response.status);
+      
       const data = await response.json();
+      console.log("📊 Datos recibidos:", data);
 
-      if (data.success) {
-        // ✅ GUARDAR TOKEN Y USUARIO EN LOCALSTORAGE
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user)); // ← ¡IMPORTANTE!
+      if (!response.ok) {
+        throw new Error(data.message || `Error ${response.status}`);
+      }
+
+      if (data.success && data.access_token && data.user) {
+        console.log("✅ Login exitoso!");
         
-        console.log("Login exitoso, usuario guardado:", data.user);
+        // Guardar en localStorage
+        localStorage.setItem("token", data.access_token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        
+        console.log("💾 Datos guardados en localStorage");
+        console.log("Token:", data.access_token);
+        console.log("User:", data.user);
+        
+        // Forzar actualización del estado global
+        window.dispatchEvent(new Event('storage'));
         
         // Redirigir al perfil
         router.push("/perfil");
+        router.refresh(); // Forzar recarga de Next.js
+        
       } else {
-        setError(data.message || "Error al iniciar sesión");
+        throw new Error("Respuesta inválida del servidor");
       }
-    } catch (error) {
-      setError("Error de conexión con el servidor");
-      console.error("Error en login:", error);
+      
+    } catch (error: any) {
+      console.error("❌ Error completo:", error);
+      setError(error.message || "Error al iniciar sesión");
+      
+      // Limpiar localStorage si hay error
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
     } finally {
       setLoading(false);
     }
@@ -52,7 +75,11 @@ export default function Login() {
       <form onSubmit={handleSubmit} className={styles.form}>
         <h1>Iniciar Sesión</h1>
         
-        {error && <div className={styles.error}>{error}</div>}
+        {error && (
+          <div className={styles.error}>
+            ⚠️ {error}
+          </div>
+        )}
         
         <div className={styles.inputGroup}>
           <label>Email</label>
@@ -61,6 +88,7 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            placeholder="maria@gmail.com"
           />
         </div>
         
@@ -71,16 +99,35 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            placeholder="••••••••"
           />
         </div>
         
-        <button type="submit" disabled={loading} className={styles.button}>
-          {loading ? "Iniciando sesión..." : "Ingresar"}
+        <button 
+          type="submit" 
+          disabled={loading} 
+          className={styles.button}
+        >
+          {loading ? "🔄 Procesando..." : "🔑 Ingresar"}
         </button>
         
         <p className={styles.registerLink}>
           ¿No tienes cuenta? <Link href="/register">Regístrate</Link>
         </p>
+        
+        {/* Botón de debug */}
+        <button 
+          type="button" 
+          onClick={() => {
+            console.log("🔍 Debug localStorage:");
+            console.log("user:", localStorage.getItem("user"));
+            console.log("token:", localStorage.getItem("token"));
+            console.log("login_time:", new Date().toISOString());
+          }}
+          className={styles.debugButton}
+        >
+          Ver Debug
+        </button>
       </form>
     </div>
   );

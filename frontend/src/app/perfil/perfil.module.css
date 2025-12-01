@@ -1,280 +1,482 @@
+/* ============================
+   PERFIL - ESTILO VINTAGE CAFECITO
+   ============================ */
+
 .paginaPerfil {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+  padding: 2rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-.cargando {
+/* ====== CARGANDO Y ERRORES ====== */
+.cargando, .error {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  color: white;
+  min-height: 60vh;
+  text-align: center;
+  color: #6b4423;
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 4px solid #d4a574;
+  border-top-color: #8b5a3c;
   border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-  margin-bottom: 16px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
-.error {
-  text-align: center;
-  color: white;
-  padding: 40px 20px;
+.error h2 {
+  color: #8b5a3c;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.botonPrimario {
-  background: white;
-  color: #667eea;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 16px;
+.error p {
+  color: #6b4423;
+  margin-bottom: 2rem;
 }
 
+/* ====== HEADER DEL PERFIL ====== */
 .headerPerfil {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 20px;
+  background: linear-gradient(145deg, #8b5a3c, #a0623a);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 10px 30px rgba(107, 68, 35, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   display: flex;
+  gap: 2rem;
   align-items: center;
-  gap: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 3px solid #6b4423;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerPerfil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #d4a574, #f5e6d3, #d4a574);
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  background: linear-gradient(145deg, #d4a574, #c19a6b);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 5px solid #6b4423;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3),
+    inset 0 2px 5px rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .avatarEmoji {
-  font-size: 36px;
+  font-size: 4rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.infoUsuario {
+  flex: 1;
+  color: #f5e6d3;
 }
 
 .infoUsuario h1 {
-  margin: 0 0 8px 0;
-  color: #333;
-  font-size: 28px;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 
 .infoUsuario p {
-  margin: 4px 0;
-  color: #666;
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+  color: #f5e6d3;
+  opacity: 0.95;
 }
 
+/* ====== STATS ====== */
 .stats {
   display: flex;
-  gap: 30px;
-  margin: 20px 0;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 2px solid rgba(245, 230, 211, 0.3);
+  border-bottom: 2px solid rgba(245, 230, 211, 0.3);
 }
 
 .stat {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .statNumero {
-  display: block;
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #667eea;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .statLabel {
-  font-size: 14px;
-  color: #888;
+  font-size: 0.85rem;
+  color: #f5e6d3;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.botonCerrarSesion {
-  background: #ff4757;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+/* ====== BOTONES ====== */
+.botonCerrarSesion, .botonPrimario {
+  background: linear-gradient(145deg, #6b4423, #5a3a1e);
+  color: #f5e6d3;
+  border: 2px solid #4a2f18;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+.botonCerrarSesion:hover, .botonPrimario:hover {
+  background: linear-gradient(145deg, #5a3a1e, #4a2f18);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== NAVEGACIÓN ====== */
 .navPerfil {
-  background: white;
-  border-radius: 12px;
-  padding: 0 20px;
-  margin-bottom: 20px;
   display: flex;
-  gap: 30px;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: rgba(139, 90, 60, 0.2);
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid #c19a6b;
 }
 
 .navLink, .navLinkActive {
-  padding: 16px 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
-  color: #666;
-  font-weight: 500;
-  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.navLink {
+  color: #8b5a3c;
+  background: rgba(212, 165, 116, 0.3);
+}
+
+.navLink:hover {
+  background: rgba(212, 165, 116, 0.5);
+  border-color: #8b5a3c;
+  transform: translateY(-2px);
 }
 
 .navLinkActive {
-  color: #667eea;
-  border-bottom-color: #667eea;
+  background: linear-gradient(145deg, #8b5a3c, #a0623a);
+  color: #f5e6d3;
+  border-color: #6b4423;
+  box-shadow: 0 4px 8px rgba(107, 68, 35, 0.3);
 }
 
+/* ====== SECCIÓN FAVORITOS ====== */
 .seccionFavoritos {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 3px solid #c19a6b;
+  box-shadow: 0 8px 20px rgba(107, 68, 35, 0.2);
 }
 
 .seccionFavoritos h2 {
-  margin: 0 0 24px 0;
-  color: #333;
+  color: #6b4423;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* ====== SIN FAVORITOS ====== */
 .sinFavoritos {
   text-align: center;
-  padding: 40px 20px;
-  color: #666;
+  padding: 3rem;
+  color: #8b5a3c;
+}
+
+.sinFavoritos p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #6b4423;
 }
 
 .botonDescubrir {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
+  background: linear-gradient(145deg, #d4a574, #c19a6b);
+  color: #4a2f18;
+  padding: 1rem 2rem;
+  border-radius: 15px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 16px;
+  font-size: 1.1rem;
+  border: 3px solid #8b5a3c;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(107, 68, 35, 0.3);
 }
 
+.botonDescubrir:hover {
+  background: linear-gradient(145deg, #c19a6b, #a0623a);
+  color: #f5e6d3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(107, 68, 35, 0.4);
+}
+
+/* ====== GRID FAVORITOS ====== */
 .gridFavoritos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .tarjetaFavorito {
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: linear-gradient(145deg, #f5e6d3, #e8d5c4);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 3px solid #c19a6b;
+  box-shadow: 0 5px 15px rgba(107, 68, 35, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .tarjetaFavorito:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(107, 68, 35, 0.3);
+  border-color: #8b5a3c;
 }
 
 .favoritoHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emoji {
-  font-size: 24px;
+  font-size: 2.5rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .favoritoHeader h3 {
+  color: #6b4423;
+  font-size: 1.3rem;
   margin: 0;
-  color: #333;
 }
 
 .descripcion {
-  color: #666;
-  margin-bottom: 12px;
-  line-height: 1.4;
+  color: #8b5a3c;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .favoritoCategoria {
-  background: #f8f9fa;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #666;
   display: inline-block;
-  margin-bottom: 16px;
+  background: linear-gradient(145deg, #c19a6b, #a0623a);
+  color: #f5e6d3;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border: 2px solid #8b5a3c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+/* ====== ACCIONES FAVORITO ====== */
 .favoritoAcciones {
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .botonVer {
-  background: #667eea;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
   flex: 1;
+  background: linear-gradient(145deg, #d4a574, #c19a6b);
+  color: #4a2f18;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
   text-align: center;
+  font-weight: bold;
+  border: 2px solid #a0623a;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.botonVer:hover {
+  background: linear-gradient(145deg, #c19a6b, #a0623a);
+  color: #f5e6d3;
+  transform: scale(1.05);
 }
 
 .botonEliminar {
-  background: #ff4757;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  background: linear-gradient(145deg, #8b5a3c, #6b4423);
+  color: #f5e6d3;
+  padding: 0.6rem 1rem;
+  border: 2px solid #5a3a1e;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
+.botonEliminar:hover {
+  background: linear-gradient(145deg, #6b4423, #4a2f18);
+  transform: scale(1.05);
+}
+
+/* ====== ACCIONES RÁPIDAS ====== */
 .accionesRapidas {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 3px solid #c19a6b;
+  box-shadow: 0 8px 20px rgba(107, 68, 35, 0.2);
 }
 
 .accionesRapidas h3 {
-  margin: 0 0 24px 0;
-  color: #333;
+  color: #6b4423;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .gridAcciones {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
 }
 
 .accion {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
-  background: #f8f9fa;
-  border-radius: 12px;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #f5e6d3, #e8d5c4);
+  border-radius: 15px;
+  border: 3px solid #c19a6b;
   text-decoration: none;
-  color: #333;
-  transition: all 0.2s;
+  color: #6b4423;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(107, 68, 35, 0.2);
 }
 
 .accion:hover {
-  background: #667eea;
-  color: white;
-  transform: translateY(-2px);
+  background: linear-gradient(145deg, #d4a574, #c19a6b);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(107, 68, 35, 0.3);
+  border-color: #8b5a3c;
 }
 
 .accionEmoji {
-  font-size: 32px;
-  margin-bottom: 12px;
+  font-size: 2.5rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.accion span:last-child {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .paginaPerfil {
+    padding: 1rem;
+  }
+
+  .headerPerfil {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .infoUsuario h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .navPerfil {
+    flex-direction: column;
+  }
+
+  .gridFavoritos {
+    grid-template-columns: 1fr;
+  }
+
+  .gridAcciones {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== EFECTOS VINTAGE ====== */
+.paginaPerfil::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(107, 68, 35, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(107, 68, 35, 0.03) 3px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.paginaPerfil > * {
+  position: relative;
+  z-index: 2;
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import * as bcrypt from 'bcrypt';
-import { JwtService} from '@nestjs/jwt';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
@@ -23,9 +23,18 @@ export class AuthService {
       career: data.career,
       study_level: data.study_level,
     });
-    // No devolver la contraseña
-    const { password: _, ...userWithoutPassword } = user;
-    return userWithoutPassword;
+    
+    // Eliminar password del objeto de respuesta
+    const { password, ...userWithoutPassword } = user;
+    
+    // Generar token
+    const token = this.jwtService.sign({ id: user.id, email: user.email });
+    
+    return {
+      success: true,
+      access_token: token,
+      user: userWithoutPassword,
+    };
   }
 
   async login(email: string, password: string) {
@@ -35,7 +44,16 @@ export class AuthService {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) throw new Error('Contraseña incorrecta');
 
+    // Generar token
     const token = this.jwtService.sign({ id: user.id, email: user.email });
-    return { token };
+    
+    // Eliminar password del objeto de respuesta
+    const { password: userPassword, ...userWithoutPassword } = user;
+    
+    return {
+      success: true,
+      access_token: token,
+      user: userWithoutPassword,
+    };
   }
-}
+} 
