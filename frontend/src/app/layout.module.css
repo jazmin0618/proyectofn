@@ -13,16 +13,15 @@
   position: relative;
 }
 
-/* Banner imagen con filtro */
-.bannerImage {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 8px solid var(--border-primary);
-  filter: sepia(0.3) contrast(1.1);
-  box-shadow: 0 4px 20px var(--shadow-medium);
-  transition: filter 0.3s ease;
+
+/* Modo oscuro */
+:global(.dark-mode) .bannerImage {
+  filter: brightness(0.85) contrast(1.2) saturate(1.1);
+  border-bottom-color: #444444;
+}
+
+:global(.dark-mode) .bannerText {
+  color: #f0f0f0;
 }
 
 /* Modo oscuro: mantener brillo pero cambiar tono */
@@ -183,7 +182,7 @@
   font-size: 18px;
   border-radius: 15px;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 2px solid transparent brown;
   transition: all 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
   font-family: 'Georgia', serif;
   text-shadow: 1px 1px 2px var(--shadow-light);

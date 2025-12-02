@@ -1,295 +1,469 @@
-/* 🎯 HEADER PRINCIPAL */
+/* ============================================
+   HEADER COMO EN LA IMAGEN
+   ============================================ */
+
+/* HEADER PRINCIPAL */
 .header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+/* BARRA SUPERIOR */
+.topBar {
+  background: white;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
 
-/* 🔤 NAVEGACIÓN PRINCIPAL */
-.mainNav {
+/* LOGO */
+.logo {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logoIcon {
+  font-size: 2rem;
+}
+
+.logoText {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #333;
+}
+
+/* CONTROLES DERECHA - 3 ELEMENTOS */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 🌐 IDIOMA */
+.languageWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.languageIcon {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.languageSelect {
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  padding: 5px 0;
+  min-width: 50px;
+}
+
+.languageSelect option {
+  background: white;
+  color: #333;
+}
+
+/* SPINNER */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* 🌙 BOTÓN TEMA */
+.themeButton {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeIcon {
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.sunIcon {
+  color: #f39c12;
+}
+
+.moonIcon {
+  color: #2c3e50;
+}
+
+.themeButton:hover .themeIcon {
+  transform: scale(1.1);
+}
+
+/* 👤 BOTÓN DE LAS 3 RAYITAS */
+.menuButton {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.menuButton:hover .menuIcon {
+  transform: scale(1.1);
+}
+
+/* BARRA DE NAVEGACIÓN PRINCIPAL */
+.mainNav {
+  background: white;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navLink {
-  color: #333;
   text-decoration: none;
+  color: #333;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  padding: 8px 0;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
-  color: #000;
-  background: rgba(0, 0, 0, 0.05);
+  color: #666;
 }
 
 .navLink.active {
-  color: #000;
+  color: #333;
   font-weight: 600;
 }
 
 .navLink.active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 1rem;
-  right: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 2px;
-  background: #000;
-  border-radius: 2px;
+  background: #333;
 }
 
-/* ⚙️ CONTROLES DERECHA */
-.controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.controlItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #666;
-}
-
-.controlItem:hover {
-  background: rgba(0, 0, 0, 0.05);
-  color: #000;
-}
-
-.controlIcon {
-  font-size: 1.1rem;
-}
-
-/* 🌐 SELECTOR IDIOMA */
-.languageSelect {
-  border: none;
-  background: transparent;
-  font-size: 0.9rem;
-  color: #666;
-  cursor: pointer;
-  outline: none;
-}
-
-.languageSelect:focus {
-  color: #000;
-}
-
-/* 👤 MENÚ USUARIO */
-.userMenuContainer {
-  position: relative;
-}
-
-.menuButton {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #666;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menuButton:hover {
-  background: rgba(0, 0, 0, 0.05);
-  color: #000;
-}
-
-.menuIcon {
-  font-size: 1.2rem;
-}
-
-/* 🎪 MENÚ DESPLEGABLE USUARIO */
+/* MENÚ DESPLEGABLE USUARIO (3 rayitas) */
 .userDropdown {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 20px;
+  margin-top: 5px;
   background: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  min-width: 220px;
-  z-index: 1000;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0;
+  min-width: 250px;
+  z-index: 1001;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* INFORMACIÓN DEL USUARIO (solo cuando está logueado) */
 .userInfo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
 }
 
-.userAvatar {
-  font-size: 2rem;
-  color: #666;
+.dropdownAvatar {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: block;
 }
 
-.userInfo div {
+.userDetails {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
-.userInfo strong {
-  font-size: 0.9rem;
-  color: #000;
+.userDetails strong {
+  font-size: 1rem;
+  color: #333;
 }
 
-.userInfo span {
-  font-size: 0.8rem;
+.userDetails span {
+  font-size: 0.85rem;
   color: #666;
+}
+
+.userDetails small {
+  font-size: 0.75rem;
+  color: #888;
+  display: block;
+  margin-top: 2px;
+}
+
+/* SECCIONES DEL DROPDOWN */
+.dropdownSection {
+  padding: 15px 20px;
+}
+
+.dropdownSection h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 .dropdownItem {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  padding: 0.75rem 1rem;
+  gap: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
   background: none;
   border: none;
-  color: #333;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  width: 100%;
   cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
 }
 
 .dropdownItem:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: #f5f5f5;
 }
 
 .dropdownIcon {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* 📱 MENÚ MÓVIL */
-.mobileMenuButton {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.mobileMenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.mobileNavLink {
-  padding: 1rem;
-  color: #333;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  background: none;
-  border: none;
-  text-align: left;
   font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: #eee;
+  margin: 0 20px;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid #eee;
+  color: #d32f2f;
   cursor: pointer;
+  font-size: 0.95rem;
+  text-align: left;
+  transition: background 0.2s;
 }
 
-.mobileNavLink:hover {
-  background: rgba(0, 0, 0, 0.05);
+.logoutButton:hover {
+  background: #ffebee;
 }
 
-.mobileUserOptions {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 1rem;
-  margin-top: 0.5rem;
+/* ============================================
+   MODO OSCURO
+   ============================================ */
+
+:global(.dark-mode) .header {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
 }
 
-/* 🔄 LOADING SPINNER */
-.loadingSpinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #666;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+:global(.dark-mode) .topBar {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+:global(.dark-mode) .logoText {
+  color: #e0e0e0;
 }
 
-/* 📱 RESPONSIVE */
+:global(.dark-mode) .languageIcon {
+  color: #bbb;
+}
+
+:global(.dark-mode) .languageSelect {
+  color: #e0e0e0;
+}
+
+:global(.dark-mode) .languageSelect option {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+:global(.dark-mode) .themeButton,
+:global(.dark-mode) .menuButton {
+  color: #bbb;
+}
+
+:global(.dark-mode) .sunIcon {
+  color: #ffd700;
+}
+
+:global(.dark-mode) .moonIcon {
+  color: #aaa;
+}
+
+:global(.dark-mode) .mainNav {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+:global(.dark-mode) .navLink {
+  color: #e0e0e0;
+}
+
+:global(.dark-mode) .navLink:hover {
+  color: #bbb;
+}
+
+:global(.dark-mode) .navLink.active {
+  color: #fff;
+}
+
+:global(.dark-mode) .navLink.active::after {
+  background: #fff;
+}
+
+:global(.dark-mode) .userDropdown {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark-mode) .userInfo {
+  background: #333;
+  border-bottom: 1px solid #444;
+}
+
+:global(.dark-mode) .userDetails strong {
+  color: #fff;
+}
+
+:global(.dark-mode) .userDetails span {
+  color: #bbb;
+}
+
+:global(.dark-mode) .userDetails small {
+  color: #999;
+}
+
+:global(.dark-mode) .dropdownSection h4 {
+  color: #999;
+}
+
+:global(.dark-mode) .dropdownItem {
+  color: #e0e0e0;
+}
+
+:global(.dark-mode) .dropdownItem:hover {
+  background: #333;
+}
+
+:global(.dark-mode) .dropdownDivider {
+  background: #444;
+}
+
+:global(.dark-mode) .logoutButton {
+  border-top-color: #444;
+  color: #ff6b6b;
+}
+
+:global(.dark-mode) .logoutButton:hover {
+  background: #3a2a2a;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 768px) {
-  .mainNav {
-    display: none;
-  }
-  
-  .mobileMenuButton {
-    display: block;
-  }
-  
-  .mobileMenu {
-    display: flex;
+  .container {
+    padding: 0 15px;
   }
   
   .controls {
-    gap: 0.5rem;
-  }
-  
-  .controlItem {
-    padding: 0.4rem;
+    gap: 10px;
   }
   
   .languageSelect {
     font-size: 0.8rem;
   }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.5rem;
+  
+  .navContainer {
+    gap: 20px;
+    justify-content: space-around;
   }
   
-  .controls {
-    gap: 0.25rem;
+  .navLink {
+    font-size: 14px;
+  }
+  
+  .userDropdown {
+    right: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
   }
 }

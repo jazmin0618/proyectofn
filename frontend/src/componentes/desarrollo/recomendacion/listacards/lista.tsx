@@ -39,7 +39,9 @@ export default function ListaHerramientas({ datosIAs }: ListaHerramientasProps) 
     { id: "programacion", nombre: "💻 Programación" },
     { id: "audio", nombre: "🎧 Audio y Música" },
     { id: "productividad", nombre: "🚀 Productividad" },
-    { id: "chatbots", nombre: "💼 Chatbots Empresariales" }
+    { id: "chatbots", nombre: "💼 Chatbots Empresariales" },
+    {id: "buscadores", nombre: "Buscadores"},
+    {id: "multilenguaje", nombre: "Multilenguaje"}
   ];
 
   return (

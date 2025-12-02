@@ -142,6 +142,7 @@
     }
   ],
   "escritura": [
+
     {
       "id": 11,
       "imagenes":"https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxiq8rwXckZAP_inAe6ki68mFKhxAIYYzc96KJMP0JY4KC899jXBwKagCNpSWPkAxVBj5ADudR0.gDOfn5L.Bpkg-&format=source",
@@ -238,16 +239,26 @@
   "audio": [
     {
       "id": 15,
-      "imagenes":"https://cdn.prod.website-files.com/657639ebfb91510f45654149/67cef0f6ac4fe688755e2fb7_667f481c82c31cfc88730e6b_AD_4nXeob58qSPf74x7zBtlB8jEWba-C_uLyJkLBl2CUtEA5tkfDXzrqzQNZekKVu9YzLwLJu0C8iBN_SHP6ukecJXe9CpCSKuOLOt53Ah6kqZLLnCK3q3LKHHz3FS6xMUj9rZS2su4NsgZ6JehpCdvQvVh1ssbt.webp",
+      "imagenes": "https://elevenlabs.io/favicon-32x32.png",
       "nombre": "ElevenLabs",
-      "emoji": "🎧",
-      "paraQueSirve": "Generación y clonación de voces con calidad profesional para diversos usos.",
-      "diferencia": "Voces ultra realistas, control emocional avanzado, clonación de voz precisa y múltiples idiomas.",
-      "porQueUsarla": "Para proyectos de audio profesional, podcasts, audiolibros y contenido que requiere voces naturales."
+      "emoji": "🎙️",
+      "paraQueSirve": "Generación de voces realistas a partir de texto, clonación de voz y creación de audiolibros.",
+      "diferencia": "Calidad de voz casi indistinguible de humana, emociones y entonaciones ajustables, clonación precisa.",
+      "porQueUsarla": "Para crear narraciones profesionales, audiolibros, contenido de podcast o voces para personajes."
+    },
+    {
+      "id": 16,
+      "imagenes": "https://assets-global.website-files.com/637841e8e7364ef6564498a1/63b6f8de8957dd6b21d62f26_Murf-logo-purple.png",
+      "nombre": "Murf AI",
+      "emoji": "🗣️",
+      "paraQueSirve": "Estudio de voz AI con más de 120 voces en 20 idiomas para crear contenido de audio profesional.",
+      "diferencia": "Editor de audio completo, sincronización de voz con video, control granular de tono y velocidad.",
+      "porQueUsarla": "Para producciones de audio y video que requieren voces profesionales y edición avanzada."
     },
     {
       "id": 26,
-      "imagenes":"https://www.aiva.ai/assets/img/aiva_logo_2.png",      "nombre": "AIVA",
+      "imagenes":"https://www.aiva.ai/assets/img/aiva_logo_2.png",      
+      "nombre": "AIVA",
       "emoji": "🎧",
       "paraQueSirve": "Composición musical asistida por IA para bandas sonoras, videojuegos y publicidad.",
       "diferencia": "Genera música original en diversos estilos (clásico, electrónico, rock), libre de derechos de autor.",
@@ -373,5 +384,95 @@
       "diferencia": "Integración nativa con la plataforma de soporte Zendesk, especializado en reducir la carga de tickets de soporte.",
       "porQueUsarla": "Para empresas que ya usan Zendesk para su soporte y quieren automatizar las respuestas iniciales a las consultas."
     }
+  ],
+  
+  "buscadores": [
+    {
+      "id": 44,
+      "imagenes": "https://cdn-1.webcatalog.io/catalog/perplexity-ai/perplexity-ai-icon-filled-256.png?v=1764054756174",
+      "nombre": "Perplexity AI",
+      "emoji": "🔍",
+      "paraQueSirve": "Motor de búsqueda conversacional que responde preguntas con respuestas citadas directamente desde la web.",
+      "diferencia": "Proporciona fuentes y referencias para cada respuesta, permite preguntas de seguimiento naturales.",
+      "porQueUsarla": "Para obtener respuestas verificadas con fuentes confiables, ideal para investigación y aprendizaje."
+    },
+    {
+      "id": 45,
+      "imagenes": "https://you.com/favicon-32x32.png",
+      "nombre": "You.com",
+      "emoji": "🌐",
+      "paraQueSirve": "Buscador con IA integrada que combina resultados web tradicionales con respuestas generativas.",
+      "diferencia": "Modos de búsqueda especializados (código, escritura, académico), mayor control sobre la experiencia.",
+      "porQueUsarla": "Cuando necesitas diferentes tipos de búsqueda especializados en una sola plataforma."
+    },
+    {
+      "id": 46,
+      "imagenes": "https://cdn.cookielaw.org/logos/3c0a6e3c-8753-4ffb-bb23-d6ab620d1d3b/3610e8a9-2d2d-4eab-a013-9a6bcf3b9983/bf1c0b73-7f23-43a6-86bd-12a03dce2c98/Microsoft_Copilot_Icon.png",
+      "nombre": "Microsoft Copilot",
+      "emoji": "🤖",
+      "paraQueSirve": "Asistente de búsqueda con IA gratuita, integrada con el motor Bing y acceso a internet.",
+      "diferencia": "Completamente gratuito, tres modos de conversación (Creativo, Equilibrado, Preciso), generación de imágenes incluida.",
+      "porQueUsarla": "Para búsquedas generales con respuestas detalladas sin costo, ideal para uso diario."
+    }
+  ],
+  "multilenguaje": [
+    {
+      "id": 12,
+      "imagenes": "https://huggingface.co/front/assets/huggingface_logo.svg",
+      "nombre": "HuggingChat",
+      "emoji": "🤗",
+      "paraQueSirve": "Chatbot de código abierto basado en modelos de Hugging Face, completamente gratuito sin límites.",
+      "diferencia": "Totalmente gratuito, varios modelos para elegir, código abierto y transparente.",
+      "porQueUsarla": "Cuando necesitas un chatbot gratuito sin restricciones y prefieres opciones open source."
+    },
+    {
+      "id": 13,
+      "imagenes": "https://mistral.ai/images/logo_hub-cdf4c4d6.png",
+      "nombre": "Mistral AI",
+      "emoji": "🇫🇷",
+      "paraQueSirve": "Modelos de lenguaje desarrollados en Francia, conocidos por su eficiencia y rendimiento en múltiples idiomas.",
+      "diferencia": "Optimizado para eficiencia computacional, buen rendimiento en francés y otros idiomas europeos.",
+      "porQueUsarla": "Para proyectos multilingües, especialmente en francés, o cuando necesitas modelos eficientes."
+    },
+    {
+      "id": 14,
+      "imagenes": "https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg",
+      "nombre": "ChatGPT (versión multilingüe)",
+      "emoji": "🌍",
+      "paraQueSirve": "Versiones especializadas en diferentes idiomas con mejor comprensión cultural y lingüística.",
+      "diferencia": "Entrenamiento específico por idioma, comprensión de matices culturales, mejores traducciones contextuales.",
+      "porQueUsarla": "Para conversaciones naturales en tu idioma nativo o para trabajar con textos en múltiples idiomas."
+    }
+  ],
+  
+  "locales_privadas": [
+    {
+      "id": 17,
+      "imagenes": "https://ollama.ai/public/icon.png",
+      "nombre": "Ollama",
+      "emoji": "🏠",
+      "paraQueSirve": "Plataforma para ejecutar modelos de lenguaje localmente en tu computadora, sin conexión a internet.",
+      "diferencia": "Totalmente privado, sin límites de uso, múltiples modelos disponibles (Llama, Mistral, etc.).",
+      "porQueUsarla": "Cuando necesitas privacidad total, trabajar sin internet o tener control completo sobre los datos."
+    },
+    {
+      "id": 18,
+      "imagenes": "https://gpt4all.io/favicon.ico",
+      "nombre": "GPT4All",
+      "emoji": "🔒",
+      "paraQueSirve": "Ecosistema de chatbots locales que funcionan en CPU estándar, sin necesidad de GPU potente.",
+      "diferencia": "Diseñado para hardware modesto, interfaz simple, completamente gratuito y open source.",
+      "porQueUsarla": "Para usar IA localmente en computadoras con recursos limitados o para aprendizaje de IA."
+    },
+    {
+      "id": 19,
+      "imagenes": "https://lmstudio.ai/favicon.ico",
+      "nombre": "LM Studio",
+      "emoji": "💻",
+      "paraQueSirve": "Interfaz gráfica para descargar, ejecutar y experimentar con modelos de lenguaje locales.",
+      "diferencia": "Interfaz visual intuitiva, fácil gestión de modelos, modo de servidor local para API.",
+      "porQueUsarla": "Para usuarios que prefieren interfaz gráfica sobre línea de comandos para modelos locales."
+    }
   ]
+
 }

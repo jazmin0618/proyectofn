@@ -12,14 +12,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <html lang="es">
         <body className={styles.body}>
           <Header/>
-          {/* Banner */}
-          <div className={styles.bannerSection}>
-            <img
-              src="/ia2.jpg" 
-              alt="Banner de Inteligencia Artificial"
-              className={styles.bannerImage}
-            />
-          </div>
+          
 
           {/* Contenido principal */}
           <main className={styles.main}>{children}</main>
