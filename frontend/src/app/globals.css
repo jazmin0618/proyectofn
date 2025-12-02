@@ -1,60 +1,198 @@
-/* Variables CSS para modo diurno/nocturno */
+/* ============================================
+   VARIABLES CSS - MODO DIURNO (VINTAGE) Y OSCURO
+   ============================================ */
+
 :root {
-  /* Variables para modo diurno (por defecto) */
-  --bg-color: #f5f7fa;
-  --text-color: #333;
-  --header-bg: #fff;
-  --card-bg: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --footer-bg: #222;
-  --footer-text: #fff;
-  --accent-color: #4a6cf7;
-  --hover-color: #f8f9ff;
-  --border-color: #f0f0f0;
-  --nav-bg: #ffffff;
-  --nav-text: #333333;
-  --nav-hover: #4a6cf7;
+  /* 🌞 MODO DIURNO - Colores Vintage/Sepia actuales */
+  --bg-primary: linear-gradient(135deg, #f5e7d6 0%, #e8d5b7 100%);
+  --bg-secondary: rgba(245, 231, 214, 0.7);
+  --bg-card: #f5e7d6;
+  --bg-header: #f5f1e6;
+  --bg-footer: linear-gradient(to top, #8b4513, #a0522d);
+  --bg-topbar: #f5f1e6;
+  --bg-dropdown: rgba(245, 231, 214, 0.15);
+  --bg-button: #e8dfca;
+  --bg-button-hover: #d4c9b8;
+  --bg-auth-button: #8b6b61;
+  --bg-auth-hover: #6d4c41;
+  
+  /* Textos */
+  --text-primary: #5c4b37;
+  --text-secondary: #5d4037;
+  --text-light: #f5e7d6;
+  --text-footer: #f5e7d6;
+  --text-copyright: #d2b48c;
+  --text-hover: #8b4513;
+  
+  /* Bordes */
+  --border-primary: #8b4513;
+  --border-secondary: #d2b48c;
+  --border-light: rgba(210, 180, 140, 0.5);
+  --border-button: #c4b5a3;
+  
+  /* Sombras */
+  --shadow-light: rgba(139, 69, 19, 0.1);
+  --shadow-medium: rgba(139, 69, 19, 0.3);
+  --shadow-heavy: rgba(139, 69, 19, 0.5);
+  --shadow-card: 0 8px 30px rgba(139, 69, 19, 0.3);
+  --shadow-inset: inset 0 0 30px rgba(139, 69, 19, 0.1);
+  
+  /* Acentos */
+  --accent-color: #a0522d;
+  --accent-hover: #8b4513;
+  
+  /* Toggle específico */
+  --toggle-bg: #f5e7d6;
+  --toggle-border: #8b4513;
+  --toggle-thumb: #a0522d;
 }
 
+/* 🌙 MODO OSCURO */
 .dark-mode {
-  /* Variables para modo nocturno */
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --header-bg: #1e1e1e;
-  --card-bg: #2d2d2d;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --footer-bg: #000000;
-  --footer-text: #cccccc;
+  /* Fondos oscuros */
+  --bg-primary: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --bg-secondary: rgba(45, 45, 45, 0.9);
+  --bg-card: #2d2d2d;
+  --bg-header: #1e1e1e;
+  --bg-footer: linear-gradient(to top, #0a0a0a, #1a1a1a);
+  --bg-topbar: #1e1e1e;
+  --bg-dropdown: rgba(45, 45, 45, 0.95);
+  --bg-button: #3a3a3a;
+  --bg-button-hover: #4a4a4a;
+  --bg-auth-button: #4a4a4a;
+  --bg-auth-hover: #5a5a5a;
+  
+  /* Textos claros */
+  --text-primary: #e0e0e0;
+  --text-secondary: #cccccc;
+  --text-light: #e0e0e0;
+  --text-footer: #cccccc;
+  --text-copyright: #888888;
+  --text-hover: #6c8cff;
+  
+  /* Bordes oscuros */
+  --border-primary: #444444;
+  --border-secondary: #555555;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-button: #555555;
+  
+  /* Sombras oscuras */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-heavy: rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-inset: inset 0 0 30px rgba(0, 0, 0, 0.3);
+  
+  /* Acentos */
   --accent-color: #6c8cff;
-  --hover-color: #3a3a3a;
-  --border-color: #444444;
-  --nav-bg: #1e1e1e;
-  --nav-text: #e0e0e0;
-  --nav-hover: #6c8cff;
+  --accent-hover: #5a7ae0;
+  
+  /* Toggle específico */
+  --toggle-bg: #3a3a3a;
+  --toggle-border: #555555;
+  --toggle-thumb: #ffd43b;
 }
 
-/* Aplicar variables a los elementos globales */
+/* ============================================
+   ESTILOS GLOBALES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 8;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, 
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+
+  }
+
+/* Textura de papel antiguo (solo modo diurno) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(139,69,19,0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-/* Asegurar que todos los elementos usen las variables */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* Ocultar textura en modo oscuro */
+.dark-mode body::before {
+  opacity: 0;
 }
 
-nav {
-  background-color: var(--nav-bg);
-  color: var(--nav-text);
+/* Links generales */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* Botones generales */
+button {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Inputs y selects */
+input, select, textarea {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-secondary);
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }

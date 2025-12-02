@@ -5,14 +5,16 @@ import Boton from "@/componentes/ui/button/boton";
 export default function Home() {
   return (
     <div>
-      <section>
-        <h1>Encuentra la IA Perfecta</h1>
-        <p>Descubre herramientas de inteligencia artificial para tus necesidades</p>
+      <section className={styles.heroSection}>
+        <h1 className={styles.heroTitle}>Encuentra la IA Perfecta</h1>
+        <p className={styles.heroSubtitle}>Descubre herramientas de inteligencia artificial para tus necesidades</p>
       </section>
-      <Link href="/recomendaciones" >
+      
+      <Link href="/recomendaciones">
         <Boton>🚀 Comenzar a Encontrar IA</Boton>
       </Link>
-      <section>
+      
+      <section className={styles.section}>
         <div className={styles.page}>
           <main className={styles.main}>
             <br/>
@@ -28,7 +30,7 @@ export default function Home() {
                 aprendizaje y toma de decisiones.
                 <br/><br/>
                 En esencia, la IA busca que las máquinas puedan:
-                  <ul>
+                <ul>
                   <li>Aprender: Adquirir información y reglas para usar la información (Aprendizaje Automático o Machine Learning).</li>
                   <li>Razonar: Utilizar reglas para llegar a conclusiones aproximadas o definidas.</li>
                   <li>Resolver problemas: Encontrar soluciones a problemas específicos.</li>
