@@ -10,7 +10,7 @@ import { InteractionsModule } from './interactions/interactions.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-    }),
+    }),  
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -36,15 +36,16 @@ import { InteractionsModule } from './interactions/interactions.module';
           synchronize: !isProduction, // Solo en desarrollo
         };
         
-        // PostgreSQL para producción (Render)
+        
+        /*// PostgreSQL para producción (Render)
         if (isProduction) {
           return {
             ...baseConfig,
             type: 'postgres',
             ssl: { rejectUnauthorized: false }, // SSL para Render
           };
-        }
-        
+        } */
+       
         // MySQL para desarrollo local (XAMPP)
         return {
           ...baseConfig,
