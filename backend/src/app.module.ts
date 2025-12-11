@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller'; 
-import {ConfigModule, ConfigService} from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppService } from './app.service';     
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
-import { config } from 'process';
+import { RecommendationsModule } from './recommendations/recommendations.module';
+import { InteractionsModule } from './interactions/interactions.module';
 
 @Module({
   imports: [
@@ -15,20 +14,48 @@ import { config } from 'process';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
-      type:'mysql',
-      host:'dpg-d4motk7diees739dm8d0-a',
-      port:5432,
-      username:'backend_aah0_user',
-      password:'TTW18FzUCBSzxXzOfu9nX3XqhWM3mC4k',
-      database:'backend_aah0',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize:true,
-      connectorPackage:'mysql2',
-      }),
+      useFactory: (configService: ConfigService) => {
+        const isProduction = configService.get('NODE_ENV') === 'production';
+        if (isProduction) {
+          return {
+           type: 'postgres',
+           url: configService.get<string>('DATABASE_URL'), // <-- ¡USAR DATABASE_URL!
+           ssl: { rejectUnauthorized: false }, 
+           entities: [__dirname + '/**/*.entity{.ts,.js}'],
+           synchronize: false, 
+           };
+    }
+        // Configuración BASE (común para MySQL y PostgreSQL)
+        const baseConfig = {
+          host: configService.get<string>('DB_HOST'),
+          port: configService.get<number>('DB_PORT'),
+          username: configService.get<string>('DB_USER'),
+          password: configService.get<string>('DB_PASS'),
+          database: configService.get<string>('DB_NAME'),
+          entities: [__dirname + '/**/*.entity{.ts,.js}'],
+          synchronize: !isProduction, // Solo en desarrollo
+        };
+        
+        // PostgreSQL para producción (Render)
+        if (isProduction) {
+          return {
+            ...baseConfig,
+            type: 'postgres',
+            ssl: { rejectUnauthorized: false }, // SSL para Render
+          };
+        }
+        
+        // MySQL para desarrollo local (XAMPP)
+        return {
+          ...baseConfig,
+          type: 'mysql',
+          connectorPackage: 'mysql2',
+        };
+      },
     }),
-    AuthModule,
-    UsersModule,
+    RecommendationsModule,
+    InteractionsModule,
+    // ... tus otros módulos
   ],
   controllers: [AppController],
   providers: [AppService],
