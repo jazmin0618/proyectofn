@@ -7,3 +7,4 @@ import { InteractionsController } from './interactions.controller';
   providers: [InteractionsService],
 })
 export class InteractionsModule {}
+ 

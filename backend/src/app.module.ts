@@ -5,7 +5,8 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RecommendationsModule } from './recommendations/recommendations.module';
 import { InteractionsModule } from './interactions/interactions.module';
-
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -54,8 +55,10 @@ import { InteractionsModule } from './interactions/interactions.module';
         };
       },
     }),
+    UsersModule,
     RecommendationsModule,
     InteractionsModule,
+    AuthModule,
     // ... tus otros módulos
   ],
   controllers: [AppController],
