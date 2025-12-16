@@ -24,7 +24,7 @@ import { IaModule } from './ia/ia.module';
            url: configService.get<string>('DATABASE_URL'), // <-- ¡USAR DATABASE_URL!
            ssl: { rejectUnauthorized: false }, 
            entities: [__dirname + '/**/*.entity{.ts,.js}'],
-           synchronize: false, 
+           synchronize: true, 
            };
     }
         // Configuración BASE (común para MySQL y PostgreSQL)
