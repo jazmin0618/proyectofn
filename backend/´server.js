@@ -6,7 +6,7 @@ const app = express();
 
 // CONFIGURAR CORS - AGREGAR ESTO
 app.use(cors({
-  origin: 'http://localhost:3000', // Tu frontend
+  origin: 'https://proyectofn.vercel.app', // Tu frontend
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
