@@ -1,0 +1,30 @@
+# .gitignore para tu proyecto
+
+# Backend NestJS
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.env.local
+backend/*.log
+backend/npm-debug.log*
+backend/coverage/
+backend/.DS_Store
+
+# Frontend Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+frontend/npm-debug.log*
+frontend/.DS_Store
+
+# General
+.DS_Store
+*.log
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
