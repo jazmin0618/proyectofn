@@ -7,6 +7,7 @@ import { RecommendationsModule } from './recommendations/recommendations.module'
 import { InteractionsModule } from './interactions/interactions.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { IaModule } from './ia/ia.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -59,6 +60,7 @@ import { UsersModule } from './users/users.module';
     RecommendationsModule,
     InteractionsModule,
     AuthModule,
+    IaModule,
     // ... tus otros módulos
   ],
   controllers: [AppController],
