@@ -18,8 +18,9 @@ export default function Login() {
 
     try {
       console.log("🔄 Enviando login...");
+      console.log("🔗 URL del backend:", process.env.NEXT_PUBLIC_API_URL);
       
-      const response = await fetch("http://localhost:3001/auth/login", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +89,7 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            placeholder="maria@gmail.com"
+            placeholder="coloca tu correo"
           />
         </div>
         
