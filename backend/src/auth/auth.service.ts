@@ -15,6 +15,7 @@ export class AuthService {
     if (existingUser) {
       throw new Error('El correo electrónico ya está en uso');
     }
+    //(Hash de contraseñas con bcrypt (10 rondas de salt))
     const hashedPassword = await bcrypt.hash(data.password, 10);
     const user = await this.usersService.create({
       email: data.email,
@@ -24,7 +25,7 @@ export class AuthService {
       study_level: data.study_level,
     });
     
-    // Eliminar password del objeto de respuesta
+    // Eliminar password del objeto de respuesta(sirve para no exponer datos)
     const { password, ...userWithoutPassword } = user;
     
     // Generar token
@@ -40,11 +41,11 @@ export class AuthService {
   async login(email: string, password: string) {
     const user = await this.usersService.findByEmail(email);
     if (!user) throw new Error('Usuario no encontrado');
-
+   //(Comaparacion segura de contraseñas)
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) throw new Error('Contraseña incorrecta');
 
-    // Generar token
+    // Generar token, 
     const token = this.jwtService.sign({ id: user.id, email: user.email });
     
     // Eliminar password del objeto de respuesta

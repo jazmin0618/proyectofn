@@ -16,6 +16,47 @@
   border: 2px solid var(--border-secondary);
 }
 
+.pageContent {
+  padding: 40px;
+}
+
+/* ============================================
+   FOLDABLES / GALAXY Z FOLD
+   ============================================ */
+@media (max-width: 480px) and (min-height: 700px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+
+  .bubble {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .question {
+    font-size: 1.25rem;
+  }
+
+  .answer {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Elementos que deben ocupar todo el ancho */
+  .heroSection,
+  .section {
+    grid-column: span 2;
+  }
+}
+
+
 .title {
   font-size: 3rem;
   text-align: center;
