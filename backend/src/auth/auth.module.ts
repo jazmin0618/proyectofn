@@ -3,6 +3,7 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { JwtModule } from '@nestjs/jwt';
 import { UsersModule } from 'src/users/users.module';
+import { RecaptchaService } from './recaptcha.service';
 
 @Module({
   imports: [
@@ -12,8 +13,9 @@ import { UsersModule } from 'src/users/users.module';
       signOptions: { expiresIn: '1h' },
     }),
   ],
-  providers: [AuthService],
+  providers: [AuthService, RecaptchaService],
   controllers: [AuthController],
+  exports:[RecaptchaService]
 })
 
 export class AuthModule {}

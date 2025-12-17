@@ -364,6 +364,36 @@
   animation: fadeIn 0.5s ease-out;
 }
 
+/* Añade esto al final del archivo */
+.recaptchaContainer {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.debugButton {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.debugButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Para hacer responsive el reCAPTCHA en móviles */
+@media (max-width: 480px) {
+  .recaptchaContainer {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+  }
+}
+
 /* Efecto de brillo sutil en el formulario */
 @keyframes subtleGlow {
   0%, 100% {

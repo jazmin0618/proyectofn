@@ -349,6 +349,20 @@
   }
 }
 
+/* Añade esto al final del archivo */
+.recaptchaContainer {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .recaptchaContainer {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+  }
+}
+
 /* ====== ANIMACIÓN DE PULSACIÓN SUTIL ====== */
 @keyframes pulse {
   0%, 100% {

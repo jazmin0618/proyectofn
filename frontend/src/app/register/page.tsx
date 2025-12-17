@@ -1,8 +1,8 @@
 'use client';
-import { useState } from 'react';
-import { authAPI } from '@/lib/api';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './register.module.css';
 
 export default function Register() {
@@ -16,7 +16,17 @@ export default function Register() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const router = useRouter();
+
+  // ¡TU CLAVE REAL DE RECAPTCHA!
+  const RECAPTCHA_SITE_KEY = "6LdO9i4sAAAAAJmGbyTJFlHcmkv_azOrQMSK0Nnf";
+
+  const handleRecaptchaChange = (token: string | null) => {
+    console.log("✅ reCAPTCHA token generado:", token);
+    setRecaptchaToken(token);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
@@ -27,13 +37,44 @@ export default function Register() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaToken) {
+      setError("⚠️ Por favor, marca la casilla 'No soy un robot'");
+      return;
+    }
+    
     setLoading(true);
     setMessage('');
     setError('');
 
     try {
-      const result = await authAPI.register(formData);
+      console.log("🔄 Enviando registro...");
+      console.log("🔗 URL del backend:", process.env.NEXT_PUBLIC_API_URL);
+      console.log("🤖 reCAPTCHA token:", recaptchaToken);
       
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          ...formData,
+          recaptchaToken // ¡IMPORTANTE: ENVIAR EL TOKEN!
+        }),
+      });
+
+      console.log("📡 Status de respuesta:", response.status);
+      
+      const result = await response.json();
+      console.log("📊 Datos recibidos:", result);
+      
+      if (!response.ok) {
+        // Resetear reCAPTCHA si hay error
+        recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
+        throw new Error(result.message || `Error ${response.status}`);
+      }
+
       if (result.success) {
         localStorage.setItem('token', result.access_token);
         localStorage.setItem('user', JSON.stringify(result.user));
@@ -44,12 +85,18 @@ export default function Register() {
         
         setTimeout(() => {
           router.push('/perfil');
+          router.refresh();
         }, 1000);
       } else {
-        setError(result.message || 'Error en el registro');
+        throw new Error(result.message || 'Error en el registro');
       }
     } catch (error: any) {
+      console.error("❌ Error completo:", error);
       setError(error.message || 'Error de conexión con el servidor');
+      
+      // Resetear reCAPTCHA
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } finally {
       setLoading(false);
     }
@@ -135,10 +182,21 @@ export default function Register() {
           </select>
         </div>
         
+        {/* ¡AQUÍ VA EL RECAPTCHA! */}
+        <div className={styles.recaptchaContainer}>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={RECAPTCHA_SITE_KEY}
+            onChange={handleRecaptchaChange}
+            theme="light"
+            size="normal"
+          />
+        </div>
+        
         <button 
           type="submit" 
           className={styles.button}
-          disabled={loading}
+          disabled={loading || !recaptchaToken}
         >
           {loading ? '🔄 Registrando...' : ' Crear mi cuenta'}
         </button>
