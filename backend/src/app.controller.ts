@@ -1,10 +1,12 @@
 import { Body, Controller, Get, Ip, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { DataSource } from 'typeorm';
+import { ConfigService } from '@nestjs/config';
 
 @Controller()
 export class AppController {
   constructor(
+    private configService: ConfigService,
     private readonly appService: AppService,
     private dataSource: DataSource
   ) {}
@@ -274,5 +276,14 @@ export class AppController {
         error: error.message
       };
     }
+  }
+  @Get('env-check')
+  checkEnv() {
+    return {
+      dbHost: this.configService.get('DATABASE_URL')?.split('@')[1]?.split('/')[0] || 'No configurada',
+      nodeEnv: this.configService.get('NODE_ENV'),
+      openAiKeyConfigured: !!this.configService.get('OPENAI_API_KEY'),
+      timestamp: new Date().toISOString()
+    };
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import styles from "./chatbot.module.css";
+import ReactMarkdown from "react-markdown";
 
 export default function ChatBotPage() {
   const [pregunta, setPregunta] = useState("");
@@ -10,6 +11,12 @@ export default function ChatBotPage() {
   const [historial, setHistorial] = useState<Array<{pregunta: string, respuesta: string}>>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const responseRef = useRef<HTMLDivElement>(null);
+
+  // URL dinámica para desarrollo/producción
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 
+    (process.env.NODE_ENV === 'production' 
+      ? "https://proyectofn-backend.onrender.com" 
+      : "http://localhost:3001");
 
   const enviarPregunta = async () => {
     if (!pregunta.trim()) return;
@@ -20,18 +27,62 @@ export default function ChatBotPage() {
     setHistorial(prev => [...prev, { pregunta, respuesta: "" }]);
 
     try {
-      const res = await fetch("http://localhost:3001/ia/recomendar", {
+      console.log("Enviando a:", `${BACKEND_URL}/ia/recomendar`);
+      
+      const res = await fetch(`${BACKEND_URL}/ia/recomendar`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pregunta }),
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({ 
+          pregunta,
+          timestamp: new Date().toISOString()
+        }),
       });
 
+      // Verificar respuesta
+      if (!res.ok) {
+        throw new Error(`Error ${res.status}: ${res.statusText}`);
+      }
+
       const data = await res.json();
-      const nuevaRespuesta = data.respuesta || "No se recibió respuesta del servidor";
-      
+console.log("Respuesta recibida:", data);
+console.log("DEBUG - Tipo de data.respuesta:", typeof data?.respuesta);
+console.log("DEBUG - Valor de data.respuesta:", data?.respuesta);
+
+// SOLUCIÓN DEFINITIVA: Manejar OBJETOS ANIDADOS
+let nuevaRespuesta = "";
+let respuestaRaw = data?.respuesta;
+
+// CASO 1: Si respuesta es un OBJETO con propiedad 'content'
+if (respuestaRaw && typeof respuestaRaw === 'object' && respuestaRaw.content) {
+  nuevaRespuesta = String(respuestaRaw.content);
+}
+// CASO 2: Si respuesta es un STRING directo
+else if (typeof respuestaRaw === 'string') {
+  nuevaRespuesta = respuestaRaw;
+}
+// CASO 3: Si respuesta es un OBJETO sin 'content'
+else if (respuestaRaw && typeof respuestaRaw === 'object') {
+  // Intenta encontrar texto en propiedades comunes
+  if (respuestaRaw.text) nuevaRespuesta = String(respuestaRaw.text);
+  else if (respuestaRaw.message) nuevaRespuesta = String(respuestaRaw.message);
+  else if (respuestaRaw.result) nuevaRespuesta = String(respuestaRaw.result);
+  else nuevaRespuesta = JSON.stringify(respuestaRaw);
+}
+// CASO 4: Si no hay respuesta
+else {
+  nuevaRespuesta = "No se recibió respuesta válida";
+}
+
+// SOLO hacer substring si es un string y tiene longitud
+if (typeof nuevaRespuesta === 'string' && nuevaRespuesta.length > 2000) {
+  nuevaRespuesta = nuevaRespuesta.substring(0, 2000) + "...";
+}
       setRespuesta(nuevaRespuesta);
       
-      // Actualizar el último historial con la respuesta
+      // Actualizar historial
       setHistorial(prev => {
         const nuevoHistorial = [...prev];
         if (nuevoHistorial.length > 0) {
@@ -40,10 +91,14 @@ export default function ChatBotPage() {
         return nuevoHistorial;
       });
 
-    } catch (error) {
-      const errorMsg = "Error al conectar con el servidor. Verifica que el backend esté corriendo.";
+    } catch (error: any) {
+      console.error("Error completo:", error);
+      
+      const errorMsg = error.message.includes("Failed to fetch") 
+        ? `Error de conexión. Backend en: ${BACKEND_URL}`
+        : `Error: ${error.message}`;
+      
       setRespuesta(errorMsg);
-      console.error(error);
       
       setHistorial(prev => {
         const nuevoHistorial = [...prev];
@@ -173,9 +228,10 @@ export default function ChatBotPage() {
                   <div key={index} style={{ marginBottom: '20px', padding: '15px', background: '#f8fafc', borderRadius: '10px' }}>
                     <p><strong>Tú:</strong> {item.pregunta}</p>
                     {item.respuesta && (
-                      <p style={{ marginTop: '10px', color: '#01497C' }}>
-                        <strong>IA:</strong> {item.respuesta}
-                      </p>
+                     <div style={{ marginTop: '10px', color: '#01497C', whiteSpace: 'pre-wrap' }}>
+                        <strong>IA:</strong> 
+                        <ReactMarkdown>{item.respuesta}</ReactMarkdown>
+                     </div>
                     )}
                   </div>
                 ))}
@@ -196,8 +252,9 @@ export default function ChatBotPage() {
                   <span>🤖</span>
                   <h3>Respuesta del Asistente</h3>
                 </div>
-                <div className={styles.responseContent}>
-                  {respuesta}
+                <div className={styles.responseContent}
+                style={{whiteSpace: 'pre-wrap'}}>
+                  <ReactMarkdown>{respuesta}</ReactMarkdown>
                 </div>
               </div>
             )}
