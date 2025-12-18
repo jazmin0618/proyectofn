@@ -386,14 +386,6 @@
   background-color: #e0e0e0;
 }
 
-/* Para hacer responsive el reCAPTCHA en móviles */
-@media (max-width: 480px) {
-  .recaptchaContainer {
-    transform: scale(0.9);
-    transform-origin: 0 0;
-  }
-}
-
 /* Efecto de brillo sutil en el formulario */
 @keyframes subtleGlow {
   0%, 100% {
@@ -411,4 +403,21 @@
 
 .form:hover {
   animation: subtleGlow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   FIX reCAPTCHA MOBILE
+   ============================================ */
+.recaptchaContainer {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .recaptchaContainer {
+    transform: scale(0.95);
+    transform-origin: center;
+  }
 }

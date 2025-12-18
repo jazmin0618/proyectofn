@@ -248,3 +248,58 @@
     padding: 18px;
   }
 }
+
+/* ============================================
+   CHATBOT MOBILE FIX
+   ============================================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .chatbotWrapper {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .leftPanel {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .rightPanel {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .inputArea {
+    font-size: 0.9rem;
+    padding: 12px;
+    min-height: 120px;
+  }
+
+  .buttonContainer {
+    gap: 10px;
+  }
+
+  .submitButton,
+  .clearButton {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .responseContent {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
