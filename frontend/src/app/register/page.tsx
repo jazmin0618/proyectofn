@@ -125,7 +125,7 @@ export default function Register() {
           <input
             type="text"
             name="name"
-            placeholder="María García"
+            placeholder="tu nombre"
             value={formData.name}
             onChange={handleChange}
             required
@@ -137,7 +137,7 @@ export default function Register() {
           <input
             type="email"
             name="email"
-            placeholder="maria@gmail.com"
+            placeholder="tu gmail"
             value={formData.email}
             onChange={handleChange}
             required
@@ -149,7 +149,7 @@ export default function Register() {
           <input
             type="password"
             name="password"
-            placeholder="••••••••"
+            placeholder="coloca el password"
             value={formData.password}
             onChange={handleChange}
             required
@@ -162,7 +162,7 @@ export default function Register() {
           <input
             type="text"
             name="career"
-            placeholder="Ingeniería en Sistemas"
+            placeholder="¿Qué estudias?"
             value={formData.career}
             onChange={handleChange}
           />
