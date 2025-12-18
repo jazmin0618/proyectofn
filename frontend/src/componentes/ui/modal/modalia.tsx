@@ -96,9 +96,6 @@ export default function ModalIA({ ia, categoria, abierto, onCerrar }: ModalIAPro
           <button className={styles.botonAccion} onClick={onCerrar}>
             Cerrar
           </button>
-          <button className={styles.botonAccionPrimario}>
-            🚀 Usar esta herramienta
-          </button>
           <button className={styles.botonAccionPrimario}
             onClick={() => {
             if (ia.url) {
