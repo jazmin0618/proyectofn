@@ -29,28 +29,20 @@ export default function Perfil() {
   const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
-    console.log('=== INICIANDO CARGA PERFIL ===');
-    
     const userData = localStorage.getItem('user');
-    console.log('Datos crudos de user:', userData);
     
     if (!userData || userData === 'undefined' || userData === 'null') {
-      console.log('No hay usuario, redirigiendo a login');
       router.push('/login');
       return;
     }
 
     try {
       const userObj = JSON.parse(userData);
-      console.log('Usuario parseado:', userObj);
       
-      // Validar estructura mínima
       if (!userObj || typeof userObj !== 'object' || !userObj.id || !userObj.email) {
-        console.error('Estructura de usuario inválida:', userObj);
         throw new Error('Datos de usuario inválidos');
       }
       
-      // Asegurar que tenga los campos requeridos
       const usuarioCompleto: Usuario = {
         id: userObj.id,
         name: userObj.name || 'Usuario',
@@ -61,68 +53,51 @@ export default function Perfil() {
       };
       
       setUsuario(usuarioCompleto);
-      console.log('Usuario establecido:', usuarioCompleto);
 
-      // Cargar favoritos del usuario - con manejo de errores
+      // Cargar favoritos
       const favoritosData = localStorage.getItem(`favoritos_${userObj.id}`);
-      console.log('Datos crudos de favoritos:', favoritosData);
-      
       let favoritosArray: number[] = [];
+      
       if (favoritosData && favoritosData !== 'undefined' && favoritosData !== 'null') {
         try {
           favoritosArray = JSON.parse(favoritosData);
         } catch (error) {
-          console.error('Error parsing favoritos:', error);
           favoritosArray = [];
         }
       }
-      
-      console.log('Array de favoritos IDs:', favoritosArray);
 
-      // Obtener datos de todas las IAs (de tu API o localStorage)
+      // Cargar IAs
       const cargarIAs = async () => {
         try {
-          console.log('Cargando IAs desde API...');
           const response = await fetch('/api');
           
           if (response.ok) {
             const todasIAsData = await response.json();
-            console.log('Todas las IAs cargadas:', todasIAsData);
-            
-            // Aplanar todas las IAs de todas las categorías
             const todasIAs: IA[] = [];
+            
             Object.values(todasIAsData).forEach((categoria: any) => {
               if (Array.isArray(categoria)) {
                 todasIAs.push(...categoria);
               }
             });
             
-            console.log('Todas las IAs aplanadas:', todasIAs);
-            
             const iasFavoritas = todasIAs.filter((ia: IA) => 
               favoritosArray.includes(ia.id)
             );
             
-            console.log('IAs favoritas filtradas:', iasFavoritas);
             setFavoritos(iasFavoritas);
           } else {
-            console.error('Error en respuesta de API:', response.status);
-            // Fallback: usar datos locales si la API falla
             cargarIAsLocales();
           }
         } catch (error) {
-          console.error('Error cargando IAs desde API:', error);
-          // Fallback: usar datos locales
           cargarIAsLocales();
         } finally {
           setCargando(false);
         }
       };
 
-      // Función fallback para cargar IAs locales
       const cargarIAsLocales = () => {
         try {
-          console.log('Cargando IAs desde localStorage...');
           const iasLocales = localStorage.getItem('todas_ias');
           if (iasLocales) {
             const todasIAsData = JSON.parse(iasLocales);
@@ -140,11 +115,9 @@ export default function Perfil() {
             
             setFavoritos(iasFavoritas);
           } else {
-            console.log('No hay IAs en localStorage');
             setFavoritos([]);
           }
         } catch (error) {
-          console.error('Error cargando IAs locales:', error);
           setFavoritos([]);
         }
       };
@@ -152,8 +125,6 @@ export default function Perfil() {
       cargarIAs();
 
     } catch (error) {
-      console.error('Error crítico al cargar perfil:', error);
-      // Limpiar localStorage corrupto
       localStorage.removeItem('user');
       localStorage.removeItem('token');
       router.push('/login');
@@ -166,11 +137,9 @@ export default function Perfil() {
     const nuevosFavoritos = favoritos.filter(ia => ia.id !== iaId);
     setFavoritos(nuevosFavoritos);
     
-    // Actualizar localStorage
     const favoritosIds = nuevosFavoritos.map(ia => ia.id);
     localStorage.setItem(`favoritos_${usuario.id}`, JSON.stringify(favoritosIds));
     
-    // Actualizar el contador en el header (recargar página)
     window.dispatchEvent(new Event('storage'));
   };
 
@@ -217,36 +186,35 @@ export default function Perfil() {
           <p>{usuario.email}</p>
           {usuario.career && <p>🎓 {usuario.career}</p>}
           {usuario.study_level && <p>📚 {usuario.study_level}</p>}
+          
           <div className={styles.stats}>
             <div className={styles.stat}>
               <span className={styles.statNumero}>{favoritos.length}</span>
               <span className={styles.statLabel}>Favoritos</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.statNumero}>Gratuito</span>
-              <span className={styles.statLabel}>Plan</span>
-            </div>
-            <div className={styles.stat}>
               <span className={styles.statNumero}>
                 {usuario.fechaRegistro 
-                  ? new Date(usuario.fechaRegistro).toLocaleDateString('es-ES')
+                  ? new Date(usuario.fechaRegistro).toLocaleDateString('es-ES', { 
+                      month: 'short', 
+                      year: 'numeric' 
+                    })
                   : 'Reciente'
                 }
               </span>
               <span className={styles.statLabel}>Miembro desde</span>
             </div>
           </div>
+          
           <button onClick={cerrarSesion} className={styles.botonCerrarSesion}>
             Cerrar Sesión
           </button>
         </div>
       </div>
 
-      {/* Navegación del perfil */}
+      {/* Navegación simplificada */}
       <nav className={styles.navPerfil}>
         <Link href="/perfil" className={styles.navLinkActive}>Mis Favoritos</Link>
-        <Link href="/historial" className={styles.navLink}>Historial</Link>
-        <Link href="/configuracion" className={styles.navLink}>Configuración</Link>
       </nav>
 
       {/* Sección de favoritos */}
@@ -283,7 +251,7 @@ export default function Perfil() {
                     onClick={() => eliminarFavorito(ia.id)}
                     className={styles.botonEliminar}
                   >
-                    ❌ Quitar
+                    Quitar
                   </button>
                 </div>
               </div>
@@ -302,11 +270,7 @@ export default function Perfil() {
           </Link>
           <Link href="/chatbot" className={styles.accion}>
             <span className={styles.accionEmoji}>💬</span>
-            <span>Chatbot IA</span>
-          </Link>
-          <Link href="/configuracion" className={styles.accion}>
-            <span className={styles.accionEmoji}>⚙️</span>
-            <span>Configuración</span>
+            <span>Chatbot</span>
           </Link>
         </div>
       </section>
