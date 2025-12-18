@@ -253,8 +253,8 @@ if (typeof nuevaRespuesta === 'string' && nuevaRespuesta.length > 2000) {
                   <h3>Respuesta del Asistente</h3>
                 </div>
                 <div className={styles.responseContent}
-                style={{whiteSpace: 'pre-wrap'}}>
-                  <ReactMarkdown>{respuesta}</ReactMarkdown>
+                style={{whiteSpace: 'pre-wrap', color:'#000000'}}>
+                 <ReactMarkdown>{respuesta}</ReactMarkdown>
                 </div>
               </div>
             )}
