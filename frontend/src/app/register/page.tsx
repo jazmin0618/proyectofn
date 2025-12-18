@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './register.module.css';
+import GoogleLoginButton from '@/componentes/desarrollo/google/GoogleLoginButton';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -201,6 +202,11 @@ export default function Register() {
           {loading ? '🔄 Registrando...' : ' Crear mi cuenta'}
         </button>
         
+        {/* NUEVO: Botón de Google */}
+        <div className={styles.separator}>
+          <span>O regístrate con</span>
+        </div>
+        <GoogleLoginButton />
         <p className={styles.loginLink}>
           ¿Ya tienes cuenta? <Link href="/login">Inicia sesión</Link>
         </p>

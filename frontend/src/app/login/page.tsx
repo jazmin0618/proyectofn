@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
 import styles from "./login.module.css";
+import GoogleLoginButton from "@/componentes/desarrollo/google/GoogleLoginButton";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -133,7 +134,14 @@ export default function Login() {
             placeholder="••••••••"
           />
         </div>
-        
+        <div className={styles.separator}>
+         <span>O continúa con</span>
+         </div>
+          <GoogleLoginButton />
+          {/* Tu código existente sigue aquí */}
+        <p className={styles.registerLink}>
+          ¿No tienes cuenta? <Link href="/register">Regístrate</Link>
+        </p>
         {/* ¡AQUÍ VA EL RECAPTCHA! */}
         <div className={styles.recaptchaContainer}>
           <ReCAPTCHA

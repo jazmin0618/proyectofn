@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
+import { User } from 'src/users/users.entity';
 
 @Injectable()
 export class AuthService {
@@ -57,4 +58,15 @@ export class AuthService {
       user: userWithoutPassword,
     };
   }
-} 
+
+  async generateToken(user: User): Promise<string> {
+  const payload = { 
+    sub: user.id, 
+    email: user.email,
+    name: user.name 
+  };
+  
+  // Asegúrate de tener JWT_SECRET en tus variables de entorno
+  return this.jwtService.sign(payload);
+ } 
+}

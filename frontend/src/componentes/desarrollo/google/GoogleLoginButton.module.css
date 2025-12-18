@@ -1,0 +1,19 @@
+/* components/GoogleLoginButton.module.css */
+.googleContainer {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.googleTitle {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Asegura que el botón de Google se vea bien */
+.g_id_signin {
+  margin: 0 auto;
+  display: inline-block !important;
+}
