@@ -11,6 +11,7 @@ interface ModalIAProps {
     diferencia: string;
     porQueUsarla: string;
     imagenes?: string;
+    url?: string;  
   };
   categoria: string;
   abierto: boolean;
@@ -98,6 +99,15 @@ export default function ModalIA({ ia, categoria, abierto, onCerrar }: ModalIAPro
           <button className={styles.botonAccionPrimario}>
             🚀 Usar esta herramienta
           </button>
+          <button className={styles.botonAccionPrimario}
+            onClick={() => {
+            if (ia.url) {
+              window.open(ia.url, "_blank", "noopener,noreferrer");
+             } else {
+            alert("No se ha configurado el enlace de esta herramienta.");
+             }
+            }}
+            >🚀 Usar esta herramienta</button>
         </div>
       </div>
     </div>

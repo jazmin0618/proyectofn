@@ -12,6 +12,7 @@ interface TarjetaIAProps {
     diferencia: string;
     porQueUsarla: string;
     imagenes?: string;
+    url?: string;  
   };
   categoria: string;
 }

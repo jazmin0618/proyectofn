@@ -7,7 +7,8 @@
       "emoji": "🎨",
       "paraQueSirve": "Creación de arte digital, ilustraciones y conceptos visuales con estilo estético marcado.",
       "diferencia": "Calidad artística excepcional, uso mediante Discord, generación de estilos diversos (realista, anime, pintura).",
-      "porQueUsarla": "Para proyectos que necesitan alta calidad artística, consistencia de estilo y resultados profesionales en arte digital."
+      "porQueUsarla": "Para proyectos que necesitan alta calidad artística, consistencia de estilo y resultados profesionales en arte digital.",
+      "url": "https://www.midjourney.com/"
     },
     
     {
@@ -17,7 +18,8 @@
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes a partir de descripciones textuales detalladas.",
       "diferencia": "Integración con ChatGPT para refinar prompts, comprensión contextual avanzada de descripciones complejas.",
-      "porQueUsarla": "Cuando necesitas imágenes precisas basadas en descripciones textuales detalladas y buscas facilidad de uso."
+      "porQueUsarla": "Cuando necesitas imágenes precisas basadas en descripciones textuales detalladas y buscas facilidad de uso.",
+       "url": "https://www.bing.com/images/create"
     },
     {
       "id": 3,
@@ -26,7 +28,8 @@
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes de código abierto, altamente personalizable. Ideal para desarrolladores y usuarios avanzados.",
       "diferencia": "Modelo de código abierto, puede ejecutarse localmente, alto grado de personalización mediante diferentes modelos.",
-      "porQueUsarla": "Para proyectos que requieren control total, personalización avanzada o integración en aplicaciones propias."
+      "porQueUsarla": "Para proyectos que requieren control total, personalización avanzada o integración en aplicaciones propias.",
+      "url": "https://stablediffusionweb.com/"
     },
     {
       "id": 4,
@@ -35,7 +38,8 @@
       "emoji": "🎨",
       "paraQueSirve": "Generación de imágenes integrada en el ecosistema Adobe. Enfocada en uso comercial y profesional.",
       "diferencia": "Enfoque en seguridad comercial (libre de derechos), integración nativa con Creative Cloud (Photoshop, Illustrator).",
-      "porQueUsarla": "Para profesionales del diseño que ya usan Adobe y necesitan integración fluida en su flujo de trabajo actual."
+      "porQueUsarla": "Para profesionales del diseño que ya usan Adobe y necesitan integración fluida en su flujo de trabajo actual.",
+      "url": "https://www.adobe.com/es/products/firefly.html"
     },
     {
       "id": 19,
@@ -44,7 +48,9 @@
       "emoji": "🎨",
       "paraQueSirve": "Creación rápida y gratuita de imágenes utilizando tecnología DALL-E.",
       "diferencia": "Acceso gratuito mediante una cuenta de Microsoft, basado en DALL-E 3, ideal para uso casual.",
-      "porQueUsarla": "Si buscas una herramienta potente y gratuita para la creación casual o de contenido en redes sociales."
+      "porQueUsarla": "Si buscas una herramienta potente y gratuita para la creación casual o de contenido en redes sociales.",
+      "url": "https://www.bing.com/images/create"
+
     },
     {
       "id": 20,
@@ -53,7 +59,8 @@
       "emoji": "🎨",
       "paraQueSirve": "Plataforma completa para la creación de activos visuales para juegos y arte conceptual.",
       "diferencia": "Enfoque en la comunidad de desarrolladores de juegos, permite entrenar modelos personalizados (LoRAs).",
-      "porQueUsarla": "Para diseñadores y desarrolladores de videojuegos que necesitan activos visuales específicos y personalizados."
+      "porQueUsarla": "Para diseñadores y desarrolladores de videojuegos que necesitan activos visuales específicos y personalizados.",
+      "url": "https://leonardo.ai/"
     }
   ],
   "video": [
@@ -64,7 +71,8 @@
       "emoji": "🎬",
       "paraQueSirve": "Generación de video a partir de texto, imágenes o clips existentes. Edición y manipulación de video.",
       "diferencia": "Pionero en la generación de video desde texto, suite completa con más de 30 herramientas AI para post-producción.",
-      "porQueUsarla": "Para proyectos de video que requieren múltiples funcionalidades de IA en una sola plataforma unificada."
+      "porQueUsarla": "Para proyectos de video que requieren múltiples funcionalidades de IA en una sola plataforma unificada.",
+      "url": "https://runwayml.com/"
     },
     {
       "id": 6,
@@ -73,7 +81,8 @@
       "emoji": "🎬",
       "paraQueSirve": "Generación de videos cortos y animados a partir de texto o imágenes.",
       "diferencia": "Interfaz simple mediante Discord, generación rápida de clips creativos con estilo artístico distintivo.",
-      "porQueUsarla": "Para crear videos animados cortos, pruebas de concepto o contenido creativo de manera rápida y accesible."
+      "porQueUsarla": "Para crear videos animados cortos, pruebas de concepto o contenido creativo de manera rápida y accesible.",
+      "url": "https://pikalabs.org/"
     },
     {
       "id": 7,
@@ -82,7 +91,8 @@
       "emoji": "🎬",
       "paraQueSirve": "Creación de videos con avatares humanos IA para contenido corporativo, educativo y de entrenamiento.",
       "diferencia": "Avatares hiperrealistas, soporte para múltiples idiomas, elimina la necesidad de equipos de grabación o actores.",
-      "porQueUsarla": "Para empresas que necesitan crear videos de training, presentaciones o contenido educativo a escala."
+      "porQueUsarla": "Para empresas que necesitan crear videos de training, presentaciones o contenido educativo a escala.",
+      "url": "https://www.synthesia.io/"
     }
   ],
   "estudio": [
@@ -93,7 +103,9 @@
       "emoji": "📚",
       "paraQueSirve": "Asistente general para aprendizaje, explicación de conceptos, resolución de dudas y práctica de habilidades.",
       "diferencia": "Versatilidad en múltiples materias, capacidad de conversación natural, adaptabilidad a diferentes niveles de comprensión.",
-      "porQueUsarla": "Como tutor personalizado 24/7 para cualquier materia o tema que necesites comprender mejor."
+      "porQueUsarla": "Como tutor personalizado 24/7 para cualquier materia o tema que necesites comprender mejor.",
+      "url": "https://chat.openai.com/"
+
     },
     {
       "id": 9,
@@ -102,7 +114,8 @@
       "emoji": "📚",
       "paraQueSirve": "Motor de conocimiento computacional para resolver problemas matemáticos, científicos y técnicos.",
       "diferencia": "Cálculos precisos, soluciones paso a paso, base de datos curada de conocimiento científico y matemático.",
-      "porQueUsarla": "Para matemáticas, física, química, ingeniería y cualquier materia que requiera cálculos precisos."
+      "porQueUsarla": "Para matemáticas, física, química, ingeniería y cualquier materia que requiera cálculos precisos.",
+      "url": "https://www.wolframalpha.com/"
     },
     {
       "id": 10,
@@ -111,7 +124,8 @@
       "emoji": "📚",
       "paraQueSirve": "Aplicación móvil para resolver problemas académicos usando la cámara del teléfono.",
       "diferencia": "Reconocimiento visual de problemas escritos, explicaciones paso a paso, integración con recursos educativos de Google.",
-      "porQueUsarla": "Cuando necesitas ayuda inmediata con ejercicios escritos en papel o libros de texto."
+      "porQueUsarla": "Cuando necesitas ayuda inmediata con ejercicios escritos en papel o libros de texto.",
+      "url": "https://socratic.org/"
     },
     {
       "id": 22,
@@ -120,7 +134,8 @@
       "emoji": "📚",
       "paraQueSirve": "Motor de respuesta que proporciona respuestas claras citando sus fuentes, ideal para investigación académica.",
       "diferencia": "Proporciona referencias directas y enlaces a las fuentes utilizadas para generar la respuesta.",
-      "porQueUsarla": "Para obtener respuestas fiables y contrastadas que requieren una validación de las fuentes."
+      "porQueUsarla": "Para obtener respuestas fiables y contrastadas que requieren una validación de las fuentes.",
+      "url": "https://www.perplexity.ai/"
     },
     {
       "id": 23,
@@ -129,7 +144,8 @@
       "emoji": "📚",
       "paraQueSirve": "Asistente de investigación basado en lenguaje que ayuda a resumir artículos científicos y extraer información clave.",
       "diferencia": "Enfoque específico en literatura científica y papers académicos.",
-      "porQueUsarla": "Para estudiantes e investigadores que necesitan revisar rápidamente grandes cantidades de literatura científica."
+      "porQueUsarla": "Para estudiantes e investigadores que necesitan revisar rápidamente grandes cantidades de literatura científica.",
+      "url": "https://elicit.org/"
     },
     {
       "id": 31,
@@ -138,7 +154,8 @@
       "emoji": "📚",
       "paraQueSirve": "Creación y estudio con flashcards, tests de práctica y juegos impulsados por IA.",
       "diferencia": "Algoritmos de aprendizaje espacial que se adaptan a tu conocimiento para optimizar el estudio.",
-      "porQueUsarla": "Para memorizar vocabulario, conceptos clave y prepararse para exámenes de forma interactiva."
+      "porQueUsarla": "Para memorizar vocabulario, conceptos clave y prepararse para exámenes de forma interactiva.",
+      "url": "https://quizlet.com/"
     }
   ],
   "escritura": [
@@ -150,7 +167,8 @@
       "emoji": "✍️",
       "paraQueSirve": "Corrección avanzada de gramática, ortografía, estilo y tono en textos escritos.",
       "diferencia": "Análisis contextual profundo, sugerencias de mejora de estilo y claridad, integración con múltiples plataformas.",
-      "porQueUsarla": "Para asegurar la calidad profesional de ensayos, trabajos académicos y documentos importantes."
+      "porQueUsarla": "Para asegurar la calidad profesional de ensayos, trabajos académicos y documentos importantes.",
+      "url": "https://www.grammarly.com/"
     },
     {
       "id": 12,
@@ -159,7 +177,8 @@
       "emoji": "✍️",
       "paraQueSirve": "Parafraseo, resumen y verificación de originalidad en textos.",
       "diferencia": "Múltiples modos de reescritura, herramienta de resumen automático, verificador de plagio integrado.",
-      "porQueUsarla": "Para mejorar la redacción, evitar repeticiones y asegurar la originalidad en tus escritos."
+      "porQueUsarla": "Para mejorar la redacción, evitar repeticiones y asegurar la originalidad en tus escritos.",
+      "url": "https://quillbot.com/"
     },
     {
       "id": 24,
@@ -168,7 +187,8 @@
       "emoji": "✍️",
       "paraQueSirve": "Generación de contenido de marketing (blogs, anuncios, copys) a escala con enfoque en SEO.",
       "diferencia": "Plantillas especializadas para contenido comercial y de marketing, optimización para motores de búsqueda.",
-      "porQueUsarla": "Para negocios y profesionales del marketing que necesitan generar contenido de alta calidad y optimizado para SEO."
+      "porQueUsarla": "Para negocios y profesionales del marketing que necesitan generar contenido de alta calidad y optimizado para SEO.",
+      "url": "https://www.jasper.ai/"
     },
     {
       "id": 32,
@@ -177,7 +197,8 @@
       "emoji": "✍️",
       "paraQueSirve": "Planificación y optimización de contenido escrito para obtener las mejores posiciones en los resultados de búsqueda.",
       "diferencia": "Analiza las páginas mejor posicionadas para sugerir la estructura, longitud y densidad de palabras clave ideal.",
-      "porQueUsarla": "Para escritores y especialistas en marketing que buscan maximizar el rendimiento SEO de su contenido."
+      "porQueUsarla": "Para escritores y especialistas en marketing que buscan maximizar el rendimiento SEO de su contenido.",
+      "url": "https://surferseo.com/"
     },
     {
       "id": 33,
@@ -186,7 +207,8 @@
       "emoji": "✍️",
       "paraQueSirve": "Asistente de escritura creativa y novelas, enfocado en el flujo de ideas y la expansión de texto.",
       "diferencia": "Interfaz limpia y comandos sencillos para generar continuaciones de historia y variar el tono.",
-      "porQueUsarla": "Para escritores de ficción que sufren de bloqueo y necesitan un impulso creativo para sus narrativas."
+      "porQueUsarla": "Para escritores de ficción que sufren de bloqueo y necesitan un impulso creativo para sus narrativas.",
+      "url": "https://www.shortlyai.com/"
     }
   ],
   "programacion": [
@@ -197,7 +219,8 @@
       "emoji": "💻",
       "paraQueSirve": "Asistente de código que sugiere líneas y funciones completas en tiempo real.",
       "diferencia": "Integración profunda con IDEs (VS Code, etc.), sugerencias contextuales basadas en el proyecto, soporte para múltiples lenguajes.",
-      "porQueUsarla": "Para aumentar la productividad en desarrollo, aprender mejores prácticas y acelerar la escritura de código."
+      "porQueUsarla": "Para aumentar la productividad en desarrollo, aprender mejores prácticas y acelerar la escritura de código.",
+      "url": "https://copilot.github.com/"
     },
     {
       "id": 14,
@@ -206,7 +229,8 @@
       "emoji": "💻",
       "paraQueSirve": "Asistente de código con foco en seguridad y mejores prácticas para AWS.",
       "diferencia": "Detección de vulnerabilidades, sugerencias optimizadas para AWS, escaneo de seguridad en tiempo real.",
-      "porQueUsarla": "Para desarrollo en la nube AWS que prioriza la seguridad y las mejores prácticas."
+      "porQueUsarla": "Para desarrollo en la nube AWS que prioriza la seguridad y las mejores prácticas.",
+      "url": "https://aws.amazon.com/codewhisperer/"
     },
     {
       "id": 25,
@@ -215,7 +239,8 @@
       "emoji": "💻",
       "paraQueSirve": "Autocompletado de código basado en IA que aprende de tu propio código y de la comunidad.",
       "diferencia": "Se puede ejecutar en modo privado sin enviar código a la nube (para privacidad), entrenamiento personalizado.",
-      "porQueUsarla": "Para programadores que buscan autocompletado avanzado con un fuerte énfasis en la privacidad y la personalización."
+      "porQueUsarla": "Para programadores que buscan autocompletado avanzado con un fuerte énfasis en la privacidad y la personalización.",
+      "url": "https://www.tabnine.com/"
     },
     {
       "id": 34,
@@ -224,7 +249,8 @@
       "emoji": "💻",
       "paraQueSirve": "Herramienta de búsqueda de código y extracción de fragmentos de código de videos y textos.",
       "diferencia": "Permite copiar código directamente de videos de YouTube o imágenes, además de ser un potente motor de búsqueda de código.",
-      "porQueUsarla": "Cuando necesitas encontrar rápidamente la solución a un problema de codificación a través de la búsqueda o extracción visual."
+      "porQueUsarla": "Cuando necesitas encontrar rápidamente la solución a un problema de codificación a través de la búsqueda o extracción visual.",
+      "url": "https://blackbox.ai/"
     },
     {
       "id": 35,
@@ -244,7 +270,8 @@
       "emoji": "🎙️",
       "paraQueSirve": "Generación de voces realistas a partir de texto, clonación de voz y creación de audiolibros.",
       "diferencia": "Calidad de voz casi indistinguible de humana, emociones y entonaciones ajustables, clonación precisa.",
-      "porQueUsarla": "Para crear narraciones profesionales, audiolibros, contenido de podcast o voces para personajes."
+      "porQueUsarla": "Para crear narraciones profesionales, audiolibros, contenido de podcast o voces para personajes.",
+      "url": "https://elevenlabs.io/"
     },
     {
       "id": 16,
